@@ -2,36 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-  font-family: "Nato-Sans";
-  src: url("assets/fonts/NotoSansGeorgian-ExtraLight.ttf");
+  font-family: 'Nato-Sans';
+  src: url('assets/fonts/NotoSansGeorgian-ExtraLight.ttf');
   font-weight: 200;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Nato-Sans";
-  src: url("assets/fonts/NotoSansGeorgian-Light.ttf");
+  font-family: 'Nato-Sans';
+  src: url('assets/fonts/NotoSansGeorgian-Light.ttf');
   font-weight: 300;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Nato-Sans";
-  src: url("assets/fonts/NotoSansGeorgian-Regular.ttf");
+  font-family: 'Nato-Sans';
+  src: url('assets/fonts/NotoSansGeorgian-Regular.ttf');
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Nato-Sans";
-  src: url("assets/fonts/NotoSansGeorgian-Medium.ttf");
+  font-family: 'Nato-Sans';
+  src: url('assets/fonts/NotoSansGeorgian-Medium.ttf');
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Nato-Sans";
-  src: url("assets/fonts/NotoSansGeorgian-Bold.ttf");
+  font-family: 'Nato-Sans';
+  src: url('assets/fonts/NotoSansGeorgian-Bold.ttf');
   font-weight: 700;
   font-display: swap;
 }
