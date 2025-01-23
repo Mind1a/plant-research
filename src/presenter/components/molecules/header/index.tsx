@@ -8,29 +8,37 @@ import BurgerBtn from '../../atoms/buttons/BurgerBtn';
 import BurgerMenuIcon from '../../atoms/burgerMenuIcon';
 import { useState } from 'react';
 import MobileMenu from '../mobileMenu';
+import BurgerBtnSearch from '../../atoms/buttons/BurgerBtnSearch';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(true);
   const handleOpenMenu = () => {
     setIsMenuOpen((prev) => !prev);
+    console.log('s');
+  };
+  const handleOpenSearch = () => {
+    if (!isSearchOpen) setIsSearchOpen(true);
+  };
+  const handleCloseSearch = () => {
+    setIsSearchOpen(false);
   };
   return (
-    <header className="border-strokeGrey max-1050:h-[64px] flex h-[84px] items-center border-b">
+    <header className="flex h-[84px] items-center border-b border-strokeGrey max-1050:h-[64px]">
       <PageWrapper>
         <div className="flex items-center justify-between">
           <div>
             <img className="w-[157px]" src={fullLogo} alt="logo" />
           </div>
           <div className="flex items-center gap-[30px]">
-            <ul className="max-1050:hidden flex items-center gap-6">
+            <ul className="flex items-center gap-6 max-1050:hidden">
               {NavLinks.map((link) => (
                 <li key={link.id}>
                   <NavLink
                     className={({ isActive }) =>
                       cn(
                         'text-body font-medium leading-[150%]',
-                        isActive ? 'text-primary active' : 'text-charcoalGrey'
+                        isActive ? 'active text-primary' : 'text-charcoalGrey'
                       )
                     }
                     to={link.url}
@@ -43,13 +51,14 @@ export default function Header() {
             <div className="max-1050:hidden">
               <SearchInput />
             </div>
-            <div className="max-1050:flex hidden items-center gap-2.5">
-              <BurgerBtn
+            <div className="hidden items-center gap-2.5 max-1050:flex">
+              <BurgerBtnSearch
                 isOpen={isSearchOpen}
-                onclick={() => console.log('first')}
+                onblur={handleCloseSearch}
+                onclick={handleOpenSearch}
               >
                 <img src={searchIcon} className="h-4 w-4" alt="search" />
-              </BurgerBtn>
+              </BurgerBtnSearch>
               <BurgerBtn isOpen={isMenuOpen} onclick={handleOpenMenu}>
                 <BurgerMenuIcon isMenuOpen={isMenuOpen} />
               </BurgerBtn>
