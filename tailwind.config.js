@@ -83,6 +83,12 @@ export default {
         small: '12px',
         button: '16px',
       },
+      colors: {
+        primary: '#13C296',
+        lightGreen: '#E8FBF6',
+        charcoalGrey: '#36454F',
+        strokeGrey: '#DFE4EA',
+      },
     },
   },
   plugins: [],

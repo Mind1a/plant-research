@@ -38,3 +38,10 @@
 .pageWrapper {
   @apply mx-auto w-full max-w-[1200px] px-[30px];
 }
+body,
+#root {
+  @apply font-natoSans antialiased;
+}
+input[type='search']::-webkit-search-cancel-button {
+  @apply hidden;
+}
