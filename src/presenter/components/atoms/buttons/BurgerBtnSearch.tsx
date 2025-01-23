@@ -73,7 +73,7 @@ export default function BurgerBtnSearch({
 
         <div
           className={cn(
-            `transition-opacity duration-0`,
+            `absolute right-[12px] transition-opacity duration-0`,
             isOpen ? 'pointer-events-none opacity-0' : 'opacity-100'
           )}
         >
