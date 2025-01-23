@@ -35,3 +35,6 @@
   font-weight: 700;
   font-display: swap;
 }
+.pageWrapper {
+  @apply mx-auto w-full max-w-[1200px] px-[30px];
+}
