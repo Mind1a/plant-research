@@ -91,8 +91,13 @@ input[type='search']::-webkit-search-cancel-button {
   }
   .menu-btn.open .menu-btn_burger::before {
     transform: rotate(45deg);
+    background-color: white;
   }
   .menu-btn.open .menu-btn_burger::after {
     transform: rotate(-45deg);
+    background-color: white;
   }
+}
+.borderBottomNotLast:not(:last-child) {
+  @apply border-b pb-5;
 }

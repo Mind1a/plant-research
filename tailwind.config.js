@@ -88,6 +88,7 @@ export default {
         lightGreen: '#E8FBF6',
         charcoalGrey: '#36454F',
         strokeGrey: '#DFE4EA',
+        lightBlack: '#637381',
       },
     },
   },

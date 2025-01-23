@@ -7,14 +7,16 @@ import SearchInput from '../../atoms/inputs/SearchInput';
 import BurgerBtn from '../../atoms/buttons/BurgerBtn';
 import BurgerMenuIcon from '../../atoms/burgerMenuIcon';
 import { useState } from 'react';
+import MobileMenu from '../mobileMenu';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const handleOpenMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
   return (
-    <header className="border-strokeGrey flex h-[84px] items-center border-b">
+    <header className="border-strokeGrey max-1050:h-[64px] flex h-[84px] items-center border-b">
       <PageWrapper>
         <div className="flex items-center justify-between">
           <div>
@@ -41,17 +43,21 @@ export default function Header() {
             <div className="max-1050:hidden">
               <SearchInput />
             </div>
-            <div className="max-1150:flex hidden items-center gap-2.5">
-              <BurgerBtn onclick={() => console.log('first')}>
+            <div className="max-1050:flex hidden items-center gap-2.5">
+              <BurgerBtn
+                isOpen={isSearchOpen}
+                onclick={() => console.log('first')}
+              >
                 <img src={searchIcon} className="h-4 w-4" alt="search" />
               </BurgerBtn>
-              <BurgerBtn onclick={handleOpenMenu}>
+              <BurgerBtn isOpen={isMenuOpen} onclick={handleOpenMenu}>
                 <BurgerMenuIcon isMenuOpen={isMenuOpen} />
               </BurgerBtn>
             </div>
           </div>
         </div>
       </PageWrapper>
+      {isMenuOpen && <MobileMenu isOpen={isMenuOpen} />}
     </header>
   );
 }
