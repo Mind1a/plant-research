@@ -3,19 +3,34 @@ import { NavLinks } from '../../../../constants';
 import { cn } from '../../../../lib/utils';
 import PageWrapper from '../../atoms/PageWrapper';
 import { motion } from 'framer-motion';
-export default function MobileMenu({ isOpen }: { isOpen: boolean }) {
+
+export default function MobileMenu() {
   const menuVariants = {
-    closed: { y: '-30%', opacity: 0, transition: { duration: 0.5 } },
-    open: { y: 0, opacity: 1, transition: { duration: 0.5 } },
+    closed: {
+      y: '-30%',
+      opacity: 0,
+      transition: { duration: 0.5 },
+    },
+    open: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5 },
+    },
+    exit: {
+      y: '-30%',
+      opacity: 0,
+      transition: { duration: 0.5 },
+    },
   };
+
   return (
     <>
       <motion.div
         initial="closed"
-        animate={isOpen ? 'open' : 'closed'}
-        exit="closed"
+        animate="open"
+        exit="exit"
         variants={menuVariants}
-        className="max-1050:block absolute top-[66px] hidden w-full rounded-md bg-white shadow-lg"
+        className="absolute top-[66px] z-[2] hidden w-full rounded-md bg-white shadow-lg max-1050:block"
       >
         <PageWrapper>
           <motion.div>
@@ -26,7 +41,7 @@ export default function MobileMenu({ isOpen }: { isOpen: boolean }) {
                     className={({ isActive }) =>
                       cn(
                         'text-lg font-medium leading-[150%]',
-                        isActive ? 'text-primary active' : 'text-charcoalGrey'
+                        isActive ? 'active text-primary' : 'text-charcoalGrey'
                       )
                     }
                     to={link.url}
@@ -39,7 +54,15 @@ export default function MobileMenu({ isOpen }: { isOpen: boolean }) {
           </motion.div>
         </PageWrapper>
       </motion.div>
-      <div className="fixed left-0 top-[64px] z-[-1] h-full w-full bg-black opacity-50"></div>
+
+      {/* Background overlay */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+        className="fixed left-0 top-[64px] z-[1] h-full w-full bg-black"
+      />
     </>
   );
 }

@@ -1,4 +1,6 @@
-export const NavLinks = [
+import { Navlink } from '../types';
+
+export const NavLinks: Navlink[] = [
   {
     id: 1,
     title: 'მთავარი',
