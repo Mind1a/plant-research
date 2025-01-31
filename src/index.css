@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'Nato-Sans';
+  src: url('assets/fonts/NotoSansGeorgian-ExtraLight.ttf');
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nato-Sans';
+  src: url('assets/fonts/NotoSansGeorgian-Light.ttf');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nato-Sans';
+  src: url('assets/fonts/NotoSansGeorgian-Regular.ttf');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nato-Sans';
+  src: url('assets/fonts/NotoSansGeorgian-Medium.ttf');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nato-Sans';
+  src: url('assets/fonts/NotoSansGeorgian-Bold.ttf');
+  font-weight: 700;
+  font-display: swap;
+}
+.pageWrapper {
+  @apply mx-auto w-full max-w-[1200px] px-[30px] max-500:px-[20px];
+}
+body,
+#root {
+  @apply flex min-h-screen flex-col bg-[#F9FAFB] font-natoSans antialiased;
+}
+input[type='search']::-webkit-search-cancel-button {
+  @apply hidden;
+}
+@layer {
+  .btnUnset {
+    all: unset;
+  }
+  .menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17px;
+    height: 12px;
+    cursor: pointer;
+  }
+  .menu-btn_burger {
+    width: 17px;
+    height: 2px;
+    background-color: #13c296;
+    border-radius: 5px;
+  }
+  .menu-btn_burger::before,
+  .menu-btn_burger::after {
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 2px;
+    background-color: #13c296;
+    border-radius: 5px;
+  }
+  .menu-btn_burger::before {
+    transform: translateY(-5px);
+  }
+
+  .menu-btn_burger::after {
+    transform: translateY(5px);
+  }
+  .menu-btn.open {
+    justify-content: right;
+  }
+  .menu-btn.open .menu-btn_burger {
+    width: 10px;
+    background-color: white;
+  }
+  .menu-btn.open .menu-btn_burger::before {
+    transform: translatex(-7px) translateY(-5px);
+    background-color: white;
+  }
+  .menu-btn.open .menu-btn_burger::after {
+    transform: translatex(-7px) translateY(5px);
+    background-color: white;
+  }
+}
+.borderBottomNotLast:not(:last-child) {
+  @apply border-b pb-5;
+}
