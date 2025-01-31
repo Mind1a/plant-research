@@ -16,7 +16,6 @@ export default function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const handleOpenMenu = () => {
     setIsMenuOpen((prev) => !prev);
-    console.log('s');
   };
   const handleOpenSearch = () => {
     setIsSearchOpen(true);
