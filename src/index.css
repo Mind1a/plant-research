@@ -36,7 +36,7 @@
   font-display: swap;
 }
 .pageWrapper {
-  @apply mx-auto w-full max-w-[1200px] px-[30px];
+  @apply mx-auto w-full max-w-[1200px] px-[30px] max-500:px-[20px];
 }
 body,
 #root {

@@ -4,4 +4,15 @@ import searchIcon from '/assets/icons/search.svg';
 import cancelIcon from '/assets/icons/cancel.svg';
 import unilabLogo from '/assets/svg/unilabLogo.svg';
 import iliauniLogo from '/assets/svg/iliauniLogo.svg';
-export { logo, fullLogo, searchIcon, cancelIcon, unilabLogo, iliauniLogo };
+import heroBanner from '/assets/webp/hero.webp';
+import rightArrow from '/assets/svg/rightArrow.svg';
+export {
+  logo,
+  fullLogo,
+  searchIcon,
+  cancelIcon,
+  unilabLogo,
+  iliauniLogo,
+  heroBanner,
+  rightArrow,
+};

@@ -92,5 +92,15 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.font-case': {
+          '-moz-font-feature-settings': '"case"',
+          '-webkit-font-feature-settings': '"case"',
+          'font-feature-settings': '"case"',
+        },
+      });
+    },
+  ],
 };
