@@ -12,8 +12,9 @@ export default function BurgerBtn({
   return (
     <button
       onClick={onclick}
+      aria-label="burger button"
       className={cn(
-        `bg-lightGreen btnUnset flex h-10 w-10 items-center justify-center rounded-md transition-all duration-300`,
+        `btnUnset flex h-10 w-10 items-center justify-center rounded-md bg-lightGreen transition-all duration-300`,
         isOpen && 'bg-primary'
       )}
     >
