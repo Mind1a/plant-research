@@ -16,7 +16,6 @@ export default function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const handleOpenMenu = () => {
     setIsMenuOpen((prev) => !prev);
-    console.log('s');
   };
   const handleOpenSearch = () => {
     setIsSearchOpen(true);
@@ -57,13 +56,15 @@ export default function Header() {
               <SearchInput />
             </div>
             <div className="hidden items-center gap-2.5 max-1050:flex">
-              <BurgerBtnSearch
-                isOpen={isSearchOpen}
-                onblur={handleCloseSearch}
-                onclick={handleOpenSearch}
-              >
-                <img src={searchIcon} className="h-4 w-4" alt="search" />
-              </BurgerBtnSearch>
+              <div className="max-550:hidden">
+                <BurgerBtnSearch
+                  isOpen={isSearchOpen}
+                  onblur={handleCloseSearch}
+                  onclick={handleOpenSearch}
+                >
+                  <img src={searchIcon} className="h-4 w-4" alt="search" />
+                </BurgerBtnSearch>
+              </div>
               <BurgerBtn isOpen={isMenuOpen} onclick={handleOpenMenu}>
                 <BurgerMenuIcon isMenuOpen={isMenuOpen} />
               </BurgerBtn>
