@@ -24,14 +24,14 @@
 
 @font-face {
   font-family: 'Nato-Sans';
-  src: url('assets/fonts/NotoSansGeorgian-Medium.ttf');
+  src: url('/assets/fonts/NotoSansGeorgian-Medium.ttf');
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Nato-Sans';
-  src: url('assets/fonts/NotoSansGeorgian-Bold.ttf');
+  src: url('/assets/fonts/NotoSansGeorgian-Bold.ttf');
   font-weight: 700;
   font-display: swap;
 }

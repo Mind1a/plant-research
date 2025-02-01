@@ -1,13 +1,17 @@
 import { useState } from 'react';
 import { cancelIcon, searchIcon } from '../../../assets';
+import { cn } from '../../../../lib/utils';
 
-export default function SearchInput() {
+export default function SearchInput({ classname }: { classname?: string }) {
   const [search, setSearch] = useState('');
   return (
     <div className="relative flex items-center">
       <input
         type="search"
-        className="bg-lightGreen focus:border-primary text-primary placeholder:text-primary h-12 w-[270px] rounded-md border border-transparent pl-5 pr-11 font-medium outline-none transition-all duration-300 focus:outline-none"
+        className={cn(
+          `h-12 w-[270px] rounded-md border border-transparent bg-lightGreen pl-5 pr-11 font-medium text-primary outline-none transition-all duration-300 placeholder:text-primary focus:border-primary focus:outline-none`,
+          classname
+        )}
         value={search}
         placeholder="ძებნა..."
         onChange={(e) => setSearch(e.target.value)}
