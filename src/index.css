@@ -108,7 +108,6 @@ input[type='search']::-webkit-search-cancel-button {
   }
   .leaf-animation {
     animation: leafPopUp 0.2s ease-out forwards;
-
     opacity: 0;
   }
   .left-leaf {

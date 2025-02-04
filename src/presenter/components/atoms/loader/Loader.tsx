@@ -8,7 +8,7 @@ export default function Loader() {
         viewBox="0 0 56 141"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute bottom-[1.5px] right-[125px]"
+        className="absolute bottom-[2px] right-[125px]"
       >
         <path
           d="M30.1902 140.538C30.1902 140.538 -0.746964 125.34 1.17269 84.4868C1.89257 69.144 7.29305 54.4083 15.8419 41.6472C23.003 30.959 37.5074 16.6569 55.6488 1.30545"
