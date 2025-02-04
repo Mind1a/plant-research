@@ -1,14 +1,14 @@
 import { NavLink } from 'react-router';
-import { NavLinks } from '../../../../constants';
-import { fullLogo, searchIcon } from '../../../assets';
-import PageWrapper from '../../atoms/PageWrapper';
-import { cn } from '../../../../lib/utils';
-import SearchInput from '../../atoms/inputs/SearchInput';
-import BurgerBtn from '../../atoms/buttons/BurgerBtn';
-import BurgerMenuIcon from '../../atoms/burgerMenuIcon';
+import { NavLinks } from '../../../../../constants';
+import { fullLogo, searchIcon } from '../../../../assets';
+import PageWrapper from '../../../atoms/PageWrapper';
+import { cn } from '../../../../../lib/utils';
+import SearchInput from '../../../atoms/inputs/SearchInput';
+import BurgerBtn from '../../../atoms/buttons/BurgerBtn';
+import BurgerMenuIcon from '../../../atoms/burgerMenuIcon';
 import { useState } from 'react';
-import MobileMenu from '../mobileMenu';
-import BurgerBtnSearch from '../../atoms/buttons/BurgerBtnSearch';
+import MobileMenu from './mobileMenu';
+import BurgerBtnSearch from '../../../atoms/buttons/BurgerBtnSearch';
 import { AnimatePresence } from 'framer-motion';
 
 export default function Header() {

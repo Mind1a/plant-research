@@ -1,5 +1,5 @@
-import { fullLogo, iliauniLogo, unilabLogo } from '../../../assets';
-import PageWrapper from '../../atoms/PageWrapper';
+import { fullLogo, iliauniLogo, unilabLogo } from '../../../../assets';
+import PageWrapper from '../../../atoms/PageWrapper';
 
 export default function Footer() {
   const year = new Date().getFullYear();
