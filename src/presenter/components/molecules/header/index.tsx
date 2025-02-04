@@ -14,7 +14,7 @@ import { AnimatePresence } from 'framer-motion';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const handleOpenMenu = () => {
+  const handleToggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
   const handleOpenSearch = () => {
@@ -22,6 +22,9 @@ export default function Header() {
   };
   const handleCloseSearch = () => {
     setIsSearchOpen(false);
+  };
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
   };
   return (
     <header className="flex h-[84px] items-center border-b border-strokeGrey bg-white max-1050:h-[64px]">
@@ -65,14 +68,16 @@ export default function Header() {
                   <img src={searchIcon} className="h-4 w-4" alt="search" />
                 </BurgerBtnSearch>
               </div>
-              <BurgerBtn isOpen={isMenuOpen} onclick={handleOpenMenu}>
+              <BurgerBtn isOpen={isMenuOpen} onclick={handleToggleMenu}>
                 <BurgerMenuIcon isMenuOpen={isMenuOpen} />
               </BurgerBtn>
             </div>
           </div>
         </div>
       </PageWrapper>
-      <AnimatePresence>{isMenuOpen && <MobileMenu />}</AnimatePresence>
+      <AnimatePresence>
+        {isMenuOpen && <MobileMenu closeMenu={handleCloseMenu} />}
+      </AnimatePresence>
     </header>
   );
 }
