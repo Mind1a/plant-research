@@ -48,6 +48,7 @@ export default function MobileMenu({ closeMenu }: { closeMenu: () => void }) {
                         isActive ? 'active text-primary' : 'text-charcoalGrey'
                       )
                     }
+                    onClick={closeMenu}
                     to={link.url}
                   >
                     {link.title}
