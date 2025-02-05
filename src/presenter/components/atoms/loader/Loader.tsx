@@ -1,61 +1,80 @@
+import { useEffect, useState } from 'react';
+import { cn } from '../../../../lib/utils';
+
 export default function Loader() {
+  const [animation, setAnimation] = useState(true);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimation((prev) => !prev);
+    }, 520);
+    return () => clearInterval(interval);
+  }, []);
   return (
-    <div className="relative flex h-[255px] w-[255px] items-center justify-center rounded-full bg-lightGreen">
+    <div className="fixed left-1/2 top-1/2 flex h-[110px] w-[110px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-lightGreen">
       {/* line */}
       <svg
-        width="56"
-        height="141"
-        viewBox="0 0 56 141"
+        width="25"
+        height="62"
+        viewBox="0 0 25 62"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute bottom-[2px] right-[125px]"
+        className="absolute bottom-[1.5px] right-[54px]"
       >
         <path
-          d="M30.1902 140.538C30.1902 140.538 -0.746964 125.34 1.17269 84.4868C1.89257 69.144 7.29305 54.4083 15.8419 41.6472C23.003 30.959 37.5074 16.6569 55.6488 1.30545"
+          d="M13.6161 61.325C13.6161 61.325 0.239803 54.7537 1.0698 37.09C1.38105 30.4562 3.71605 24.085 7.4123 18.5675C10.5086 13.9462 16.7798 7.7625 24.6236 1.125"
           stroke="#12C295"
-          stroke-miterlimit="10"
-          className="line-animation"
+          strokeMiterlimit="10"
+          className={cn(animation && 'line-animation')}
         />
       </svg>
-      {/* laft leaf */}
+      {/* left leaf */}
       <svg
-        width="59"
-        height="98"
-        viewBox="0 0 59 98"
+        width="27"
+        height="42"
+        viewBox="0 0 27 42"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="leaf-animation left-leaf absolute left-[41px] top-[46.5px]"
+        className={cn(
+          `left-leaf absolute left-[17px] top-[20px]`,
+          animation && 'leaf-animation'
+        )}
       >
         <path
-          d="M2.42341 0.511536C2.42341 0.511536 46.4106 25.8284 54.7426 47.7338C54.7426 47.7338 70.2964 77.5925 39.9434 91.6864C39.9434 91.6864 43.5745 45.3054 7.79208 9.04878C7.79208 9.04878 29.7495 40.3906 32.7794 62.1081C33.08 64.2504 33.5108 66.3608 33.9589 68.4771C34.8638 72.7616 35.9133 81.4781 34.0572 95.2452C34.0572 95.2452 0.928738 110.579 0.200195 51.0817L2.42341 0.511536Z"
+          d="M1.77472 0.110138C1.77472 0.110138 20.7934 11.0564 24.3959 20.5276C24.3959 20.5276 31.1209 33.4375 17.9972 39.5313C17.9972 39.5313 19.5672 19.4776 4.09597 3.80138C4.09597 3.80138 13.5897 17.3526 14.8997 26.7426C15.0297 27.6688 15.2159 28.5813 15.4097 29.4963C15.8009 31.3488 16.2547 35.1175 15.4522 41.07C15.4522 41.07 1.12848 47.7 0.813477 21.9751L1.77472 0.110138Z"
           fill="#12C295"
         />
       </svg>
       {/* middle leaf */}
       <svg
-        width="89"
-        height="97"
-        viewBox="0 0 89 97"
+        width="39"
+        height="42"
+        viewBox="0 0 39 42"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="leaf-animation middle-leaf absolute right-[48px] top-[30px]"
+        className={cn(
+          `middle-leaf absolute right-[21px] top-[12px]`,
+          animation && 'leaf-animation'
+        )}
       >
         <path
-          d="M88.409 0.500256C88.409 0.500256 90.0887 71.4351 58.8219 89.6603C58.8219 89.6603 40.1978 104.532 14.3605 89.5822C14.3605 89.5822 54.3061 60.9117 73.4535 24.4092C73.4535 24.4092 41.4496 68.5672 11.3711 85.3324C11.3711 85.3324 -18.8548 65.7542 23.1406 33.3339C23.1406 33.3339 79.8804 -2.80133 88.409 0.500256Z"
+          d="M38.8123 0.322623C38.8123 0.322623 39.5386 30.9926 26.0198 38.8726C26.0198 38.8726 17.9673 45.3026 6.79606 38.8389C6.79606 38.8389 24.0673 26.4426 32.3461 10.6601C32.3461 10.6601 18.5086 29.7526 5.50356 37.0014C5.50356 37.0014 -7.56519 28.5364 10.5923 14.5189C10.5923 14.5189 35.1248 -1.10488 38.8123 0.322623Z"
           fill="#12C295"
         />
       </svg>
       {/* right leaf */}
       <svg
-        width="124"
-        height="61"
-        viewBox="0 0 124 61"
+        width="54"
+        height="27"
+        viewBox="0 0 54 27"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="leaf-animation right-leaf absolute bottom-[51px] right-[35px]"
+        className={cn(
+          `right-leaf absolute bottom-[23px] right-[15px]`,
+          animation && 'leaf-animation'
+        )}
       >
         <path
-          d="M123.525 42.5915C123.525 42.5915 71.8305 66.0495 34.1688 59.3192C34.1688 59.3192 -6.23366 53.1844 0.921697 26.87C0.921697 26.87 7.45257 15.5168 106.061 39.8364C106.061 39.8364 34.2815 14.3807 3.83009 19.0324C3.83009 19.0324 28.1612 -15.3104 77.3842 9.96892C77.3842 9.96892 105.988 23.9182 123.525 42.5915Z"
+          d="M53.9158 18.6764C53.9158 18.6764 31.5646 28.8189 15.2808 25.9089C15.2808 25.9089 -2.18791 23.2564 0.905842 11.8789C0.905842 11.8789 3.72959 6.9701 46.3646 17.4851C46.3646 17.4851 15.3296 6.47885 2.16334 8.4901C2.16334 8.4901 12.6833 -6.35865 33.9658 4.57135C33.9658 4.57135 46.3333 10.6026 53.9158 18.6764Z"
           fill="#12C295"
         />
       </svg>

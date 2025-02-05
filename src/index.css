@@ -102,31 +102,31 @@ input[type='search']::-webkit-search-cancel-button {
 
 @layer {
   .line-animation {
-    stroke-dasharray: 460;
-    stroke-dashoffset: 460;
-    animation: lineGrow 0.5s ease-in-out forwards;
+    stroke-dasharray: 73;
+    stroke-dashoffset: 73;
+    animation: lineGrow 0.4s ease-in-out forwards;
   }
   .leaf-animation {
     animation: leafPopUp 0.2s ease-out forwards;
     opacity: 0;
   }
   .left-leaf {
-    animation-delay: 0.4s;
+    animation-delay: 0.45s;
     transform-origin: bottom center;
   }
 
   .middle-leaf {
-    animation-delay: 0.2s;
+    animation-delay: 0.25s;
     transform-origin: bottom left;
   }
 
   .right-leaf {
-    animation-delay: 0.32s;
+    animation-delay: 0.35s;
     transform-origin: left center;
   }
   @keyframes lineGrow {
     0% {
-      stroke-dashoffset: 460;
+      stroke-dashoffset: 73;
     }
     100% {
       stroke-dashoffset: 0;
