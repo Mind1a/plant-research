@@ -1,4 +1,3 @@
-import Loader from '../components/atoms/loader/Loader';
 import PageWrapper from '../components/atoms/PageWrapper';
 import SarkveviHeader from '../components/molecules/sarkvevipage/SarkveviHeader';
 import SarkveviInstruction from '../components/molecules/sarkvevipage/SarkveviInstruction';

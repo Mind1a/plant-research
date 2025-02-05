@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { NavLinks } from '../../../../../constants';
 import { fullLogo, searchIcon } from '../../../../assets';
 import PageWrapper from '../../../atoms/PageWrapper';
@@ -30,13 +30,13 @@ export default function Header() {
     <header className="flex h-[84px] items-center border-b border-strokeGrey bg-white max-1050:h-[64px]">
       <PageWrapper>
         <div className="flex items-center justify-between">
-          <div>
+          <Link to={'/'}>
             <img
               className="w-[157px] max-1050:w-[125px]"
               src={fullLogo}
               alt="logo"
             />
-          </div>
+          </Link>
           <div className="flex items-center gap-[30px]">
             <ul className="flex items-center gap-6 max-1050:hidden">
               {NavLinks.map((link) => (
