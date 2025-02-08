@@ -81,7 +81,7 @@ export default function BurgerBtnSearch({
         </div>
       </button>
       {isOpen && (
-        <div className="fixed left-0 top-[64px] z-[1] h-full w-full bg-black opacity-50"></div>
+        <div className="fixed left-0 top-[64px] z-[1] h-full w-full cursor-pointer bg-charcoalGrey opacity-30"></div>
       )}
     </>
   );

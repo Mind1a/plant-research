@@ -8,7 +8,6 @@ export default function Button({
   children,
 }: {
   label: string;
-  icon?: string;
   onclick?: () => void;
   variant?: 'primary' | 'secondary';
   clasname?: string;
@@ -18,7 +17,7 @@ export default function Button({
     <button
       onClick={onclick}
       className={cn(
-        `font-case tranastion-all flex h-12 items-center gap-2.5 rounded-[10px] border border-transparent duration-300`,
+        `tranastion-all flex h-12 items-center justify-center gap-2.5 rounded-[10px] border border-transparent duration-300 font-case`,
         clasname,
         variant === 'primary' &&
           'bg-primary px-[18px] text-white hover:bg-[#00B083]',

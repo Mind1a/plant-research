@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router';
-import { NavLinks } from '../../../../constants';
-import { cn } from '../../../../lib/utils';
-import PageWrapper from '../../atoms/PageWrapper';
+import { NavLinks } from '../../../../../../constants';
+import { cn } from '../../../../../../lib/utils';
+import PageWrapper from '../../../../atoms/PageWrapper';
 import { motion } from 'framer-motion';
-import SearchInput from '../../atoms/inputs/SearchInput';
+import SearchInput from '../../../../atoms/inputs/SearchInput';
 
-export default function MobileMenu() {
+export default function MobileMenu({ closeMenu }: { closeMenu: () => void }) {
   const menuVariants = {
     closed: {
       y: '-30%',
@@ -44,10 +44,11 @@ export default function MobileMenu() {
                   <NavLink
                     className={({ isActive }) =>
                       cn(
-                        'text-lg font-medium leading-[150%]',
+                        'block !w-full text-lg font-medium leading-[150%]',
                         isActive ? 'active text-primary' : 'text-charcoalGrey'
                       )
                     }
+                    onClick={closeMenu}
                     to={link.url}
                   >
                     {link.title}
@@ -62,10 +63,11 @@ export default function MobileMenu() {
       {/* Background overlay */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.5 }}
+        animate={{ opacity: 0.3 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
-        className="fixed left-0 top-[64px] z-[1] hidden h-full w-full bg-black max-1050:block"
+        className="fixed left-0 top-[64px] z-[1] hidden h-full w-full cursor-pointer bg-charcoalGrey max-1050:block"
+        onClick={closeMenu}
       />
     </>
   );
