@@ -8,6 +8,7 @@ import heroBanner from '/assets/webp/hero.webp';
 import rightArrow from '/assets/svg/rightArrow.svg';
 import aboutBanner from '/assets/webp/about-project.webp';
 import aboutBannerSm from '/assets/webp/about-project-sm.webp';
+import aboutProjectImg from '/assets/webp/about-project-img.webp';
 
 export {
   logo,
@@ -20,4 +21,5 @@ export {
   rightArrow,
   aboutBanner,
   aboutBannerSm,
+  aboutProjectImg,
 };
