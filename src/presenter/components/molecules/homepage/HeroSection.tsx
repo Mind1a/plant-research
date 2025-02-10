@@ -26,7 +26,6 @@ export default function HeroSection() {
         <Button
           onclick={() => navigate('/learn-more')}
           label="გაიგე მეტი"
-          icon={rightArrow}
           clasname="max-450:text-[12px] max-450:h-[36px] max-450:px-2 max-450:gap-2"
         >
           <img
