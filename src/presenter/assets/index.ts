@@ -11,6 +11,10 @@ import aboutBannerSm from '/assets/webp/about-project-sm.webp';
 import aboutProjectImg from '/assets/webp/about-project-img.webp';
 import bookIcon from '/assets/icons/book-open-alt.svg';
 import ProjectAuthorimg from '/assets/webp/project-author.webp';
+import linkedInIcon from '/assets/icons/linkedIn.svg';
+import dribbbleIcon from '/assets/icons/dribble.svg';
+import behanceIcon from '/assets/icons/behance.svg';
+import discordIcon from '/assets/icons/discord.svg';
 
 export {
   logo,
@@ -26,4 +30,8 @@ export {
   aboutProjectImg,
   bookIcon,
   ProjectAuthorimg,
+  linkedInIcon,
+  dribbbleIcon,
+  behanceIcon,
+  discordIcon,
 };

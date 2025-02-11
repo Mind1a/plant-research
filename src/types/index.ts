@@ -10,14 +10,14 @@ export type ProjectAuthorType = {
   description: string;
 };
 
-// export type TeamMember = {
-//   name: string;
-//   position: string;
-//   socialLinks?: {
-//     linkedin?: string;
-//     dribbble?: string;
-//     behance?: string;
-//     discord?: string;
-//   };
-//   team: 'Project Management' | 'Design Team' | 'Development Team';
-// };
+export type TeamMember = {
+  name: string;
+  position: string;
+  socialLinks?: {
+    linkedin?: string;
+    dribbble?: string;
+    behance?: string;
+    discord?: string;
+  };
+  team: 'Project Management' | 'Design Team' | 'Development Team';
+};

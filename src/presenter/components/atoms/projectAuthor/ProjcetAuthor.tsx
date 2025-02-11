@@ -1,4 +1,5 @@
 import { projectAuthorInfo } from '../../../../constants/index';
+
 export default function ProjectAuthor() {
   return (
     <div className="mb-[96px] flex justify-center">
