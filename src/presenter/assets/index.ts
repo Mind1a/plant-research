@@ -9,6 +9,8 @@ import rightArrow from '/assets/svg/rightArrow.svg';
 import aboutBanner from '/assets/webp/about-project.webp';
 import aboutBannerSm from '/assets/webp/about-project-sm.webp';
 import aboutProjectImg from '/assets/webp/about-project-img.webp';
+import bookIcon from '/assets/icons/book-open-alt.svg';
+import ProjectAuthorimg from '/assets/webp/project-author.webp';
 
 export {
   logo,
@@ -22,4 +24,6 @@ export {
   aboutBanner,
   aboutBannerSm,
   aboutProjectImg,
+  bookIcon,
+  ProjectAuthorimg,
 };

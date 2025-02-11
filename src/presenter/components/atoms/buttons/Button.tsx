@@ -6,12 +6,14 @@ export default function Button({
   variant = 'primary',
   clasname,
   children,
+  iconPosition = 'right',
 }: {
   label: string;
   onclick?: () => void;
   variant?: 'primary' | 'secondary';
   clasname?: string;
   children?: React.ReactNode;
+  iconPosition?: 'left' | 'right';
 }) {
   return (
     <button
@@ -25,8 +27,9 @@ export default function Button({
           'border-primary bg-lightGreen px-[18px] text-primary hover:border-transparent hover:bg-[#077A5D] hover:text-white'
       )}
     >
+      {iconPosition === 'left' && children}
       {label}
-      {children}
+      {iconPosition === 'right' && children}
     </button>
   );
 }
