@@ -1,11 +1,9 @@
 import { teamMembers } from '../../../../constants/index';
 import { TeamMember } from '../../../../types';
-import {
-  linkedInIcon,
-  dribbbleIcon,
-  behanceIcon,
-  discordIcon,
-} from '../../../assets';
+import LinkedInIcon from '../../../../assets/svgs/linkedIn.svg?react';
+import DribbbleIcon from '../../../../assets/svgs/dribble.svg?react';
+import BehanceIcon from '../../../../assets/svgs/behance.svg?react';
+import DiscordIcon from '../../../../assets/svgs/discrod.svg?react';
 
 export default function WorkingTeam() {
   const groupedTeams: Record<
@@ -24,33 +22,49 @@ export default function WorkingTeam() {
     <section className="grid grid-cols-3 gap-4 text-charcoalGrey">
       {Object.entries(groupedTeams).map(([teamName, members]) => (
         <div key={teamName} className="flex flex-col gap-4">
-          <h2 className="mb-4 text-xl font-medium">{teamName}</h2>
+          <h2 className="mb-6 text-xl font-medium">{teamName}</h2>
           {members.map((member, index) => (
             <div
               key={index}
-              className="h-full max-h-[112px] w-full max-w-[300px] rounded-lg border p-4 shadow-sm"
+              className="h-full max-h-[112px] w-full max-w-[300px] rounded-lg border px-[23px] py-[15px]"
             >
-              <h3 className="font-semibold">{member.name}</h3>
-              <p className="text-gray-600">{member.position}</p>
-              <div className="mt-2 flex items-center gap-2">
+              <h3 className="mb-1">{member.name}</h3>
+              <p className="text-xs leading-[18px]">{member.position}</p>
+              <div className="mt-3 flex items-center gap-2">
                 {member.socialLinks?.linkedin && (
-                  <a href={member.socialLinks.linkedin} target="_blank">
-                    <img src={linkedInIcon} alt="LinkedIn" />
+                  <a
+                    href={member.socialLinks.linkedin}
+                    target="_blank"
+                    className="group"
+                  >
+                    <LinkedInIcon className="transition-all duration-1000 group-hover:[&>path:first-child]:fill-[#0E76A8]" />
                   </a>
                 )}
                 {member.socialLinks?.discord && (
-                  <a href={member.socialLinks.discord} target="_blank">
-                    <img src={discordIcon} alt="Discord" />
+                  <a
+                    href={member.socialLinks.discord}
+                    target="_blank"
+                    className="group"
+                  >
+                    <DiscordIcon className="transition-all duration-300 group-hover:[&>path]:fill-[#5865F2]" />
                   </a>
                 )}
                 {member.socialLinks?.dribbble && (
-                  <a href={member.socialLinks.dribbble} target="_blank">
-                    <img src={dribbbleIcon} alt="Dribbble" />
+                  <a
+                    href={member.socialLinks.dribbble}
+                    target="_blank"
+                    className="group"
+                  >
+                    <DribbbleIcon className="transition-all duration-300 group-hover:[&>path]:fill-[#C7306B]" />
                   </a>
                 )}
                 {member.socialLinks?.behance && (
-                  <a href={member.socialLinks.behance} target="_blank">
-                    <img src={behanceIcon} alt="Behance" />
+                  <a
+                    href={member.socialLinks.behance}
+                    target="_blank"
+                    className="group"
+                  >
+                    <BehanceIcon className="transition-all duration-300 group-hover:[&>path]:fill-[#0057FF]" />
                   </a>
                 )}
               </div>

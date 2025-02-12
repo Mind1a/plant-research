@@ -1,6 +1,6 @@
 import Button from '../../atoms/buttons/Button';
 import { aboutProjectImg } from '../../../assets';
-import { bookIcon } from '../../../assets';
+import BookIcon from '../../../../assets/svgs/book-open-alt.svg?react';
 
 export default function AboutProjectSection() {
   return (
@@ -70,14 +70,19 @@ export default function AboutProjectSection() {
           </p>
         </div>
       </section>
-      <Button
-        label="წიგნის ნახვა (PDF)"
-        variant="secondary"
-        clasname="mt-[85px] mb-[96px]"
-        iconPosition="left"
+      <a
+        href="https://linkedin.com/"
+        target="_blank"
+        className="group mb-[96px] mt-[85px] inline-flex w-fit"
       >
-        <img src={bookIcon} className="hover:invert-[1]" />
-      </Button>
+        <Button
+          label="წიგნის ნახვა (PDF)"
+          variant="secondary"
+          iconPosition="left"
+        >
+          <BookIcon className="transition-all duration-300 group-hover:[&>path]:fill-white" />
+        </Button>
+      </a>
     </>
   );
 }
