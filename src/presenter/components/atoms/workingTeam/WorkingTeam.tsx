@@ -19,14 +19,16 @@ export default function WorkingTeam() {
     ),
   };
   return (
-    <section className="grid grid-cols-3 gap-4 text-charcoalGrey">
+    <section className="grid grid-cols-3 gap-4 text-charcoalGrey max-1000:grid-cols-2 max-1000:justify-between max-700:grid-cols-1">
       {Object.entries(groupedTeams).map(([teamName, members]) => (
-        <div key={teamName} className="flex flex-col gap-4">
-          <h2 className="mb-6 text-xl font-medium">{teamName}</h2>
+        <div key={teamName} className="flex flex-col gap-4 max-1000:mb-8">
+          <h2 className="mb-6 text-xl font-medium max-1000:mb-0 max-1000:text-lg">
+            {teamName}
+          </h2>
           {members.map((member, index) => (
             <div
               key={index}
-              className="h-full max-h-[112px] w-full max-w-[300px] rounded-lg border px-[23px] py-[15px]"
+              className="h-full max-h-[112px] w-full max-w-[300px] rounded-lg border px-[23px] py-[15px] max-1000:max-w-full"
             >
               <h3 className="mb-1">{member.name}</h3>
               <p className="text-xs leading-[18px]">{member.position}</p>

@@ -9,9 +9,14 @@ export default function AboutProjectSection() {
         <h2 className="text-title-sm font-bold leading-[1.5] text-charcoalGrey max-1000:text-subtitle max-450:text-[16px]">
           პროექტის შესახებ
         </h2>
-        <div className="mb-1 mt-16 flex flex-row gap-[28.57px]">
-          <div className="flex flex-col gap-1">
-            <p className="w-full flex-1 text-[14px] leading-[21px] text-charcoalGrey">
+        <div className="mb-1 mt-16 max-700:flex max-700:flex-col-reverse max-700:items-center">
+          <img
+            src={aboutProjectImg}
+            alt=""
+            className="float-right ml-[28.57px] mt-2 h-full max-h-[330px] w-full max-w-[471px] rotate-180 scale-y-[-1] rounded-[10px] max-1050:w-[400px] max-900:w-[350px] max-800:w-[290px] max-700:my-4 max-700:ml-0 max-700:w-full"
+          />
+          <div className="">
+            <p className="mb-1 w-full flex-1 text-[14px] leading-[21px] text-charcoalGrey">
               პროექტის „საქართველოს მცენარეთა განყოფილებებისა და ოჯახების
               სარკვევი“ იდეა გაჩნდა 2023 წელს ბოტანიკის საბაკალავრო კურსის
               სწავლებისას, მას შემდეგ, რაც კურსის ერთ-ერთმა სტუდენტმა
@@ -35,12 +40,8 @@ export default function AboutProjectSection() {
               ტაქსონომიური რანგის ჯგუფების განმასხვავებელი ნიშნები. ამიტომ
             </p>
           </div>
-          <img
-            src={aboutProjectImg}
-            alt=""
-            className="mt-2 h-full max-h-[330px] w-full max-w-[471px] rotate-180 scale-y-[-1] rounded-[10px]"
-          />
         </div>
+
         <div className="flex flex-col gap-1">
           <p className="!leading-[1.8 ] w-full text-[14px] leading-[21px] text-charcoalGrey">
             თანამედროვე საკლასიფიკაციო სისტემებისგან ზოგიერთი განსხვავების
@@ -73,7 +74,7 @@ export default function AboutProjectSection() {
       <a
         href="https://linkedin.com/"
         target="_blank"
-        className="group mb-[96px] mt-[85px] inline-flex w-fit"
+        className="group mb-[96px] mt-[85px] flex w-fit max-1000:mx-auto"
       >
         <Button
           label="წიგნის ნახვა (PDF)"
