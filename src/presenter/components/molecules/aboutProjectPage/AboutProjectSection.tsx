@@ -74,15 +74,10 @@ export default function AboutProjectSection() {
       <a
         href="https://linkedin.com/"
         target="_blank"
-        className="group mb-[96px] mt-[85px] flex w-fit max-1000:mx-auto"
+        className="tranastion-all group mb-[96px] mt-[85px] flex h-12 w-fit items-center justify-center gap-2.5 rounded-[10px] border border-primary bg-lightGreen px-[18px] text-primary duration-300 font-case hover:border-transparent hover:bg-[#077A5D] hover:text-white max-1000:mx-auto"
       >
-        <Button
-          label="წიგნის ნახვა (PDF)"
-          variant="secondary"
-          iconPosition="left"
-        >
-          <BookIcon className="transition-all duration-300 group-hover:[&>path]:fill-white" />
-        </Button>
+        <BookIcon className="transition-all duration-300 group-hover:[&>path]:fill-white" />
+        <span>წიგნის ნახვა (PDF)</span>
       </a>
     </>
   );
