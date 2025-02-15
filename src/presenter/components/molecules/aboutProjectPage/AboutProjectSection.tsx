@@ -1,4 +1,3 @@
-import Button from '../../atoms/buttons/Button';
 import { aboutProjectImg } from '../../../assets';
 import BookIcon from '../../../../assets/svgs/book-open-alt.svg?react';
 
