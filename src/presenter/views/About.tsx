@@ -4,7 +4,7 @@ import WorkingTeamSection from '../components/molecules/aboutProjectPage/Working
 
 export default function About() {
   return (
-    <PageWrapper classname="my-[72px] max-1000:my-[42px] max-500:my-[27px] p-0 max-1000:px-[77px] max-700:px-[24px]">
+    <PageWrapper classname="my-[72px] max-1000:my-[42px] max-500:my-[27px] p-0">
       <AboutProjectSection />
       <WorkingTeamSection />
     </PageWrapper>

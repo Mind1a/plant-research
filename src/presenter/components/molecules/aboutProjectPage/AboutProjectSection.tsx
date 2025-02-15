@@ -5,7 +5,7 @@ import BookIcon from '../../../../assets/svgs/book-open-alt.svg?react';
 export default function AboutProjectSection() {
   return (
     <>
-      <section>
+      <section className="text-justify">
         <h2 className="text-title-sm font-bold leading-[1.5] text-charcoalGrey max-1000:text-subtitle max-450:text-[16px]">
           პროექტის შესახებ
         </h2>

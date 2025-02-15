@@ -14,7 +14,7 @@ export default function ProjectAuthor() {
         </h3>
         <p className="mb-6 text-xl max-1000:text-lg">პროექტის ავტორი</p>
       </div>
-      <p className="col-start-2 row-start-2 mt-[-30px] text-body-md leading-[21px] text-charcoalGrey max-1000:row-span-2 max-1000:mt-0 max-1000:text-body-md">
+      <p className="col-start-2 row-start-2 mt-[-30px] text-justify text-body-md leading-[21px] text-charcoalGrey max-1000:row-span-2 max-1000:mt-0 max-1000:text-body-md">
         {projectAuthorInfo.description}
       </p>
     </div>
