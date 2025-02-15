@@ -16,7 +16,7 @@ export default function AboutProjectSection() {
             className="float-right ml-[28.57px] mt-2 h-full max-h-[330px] w-full max-w-[471px] rotate-180 scale-y-[-1] rounded-[10px] max-1050:w-[400px] max-900:w-[350px] max-800:w-[290px] max-700:my-4 max-700:ml-0 max-700:w-full"
           />
           <div className="">
-            <p className="mb-1 w-full flex-1 text-[14px] leading-[21px] text-charcoalGrey">
+            <p className="mb-1 w-full flex-1 text-[14px] leading-[1.8] text-charcoalGrey">
               პროექტის „საქართველოს მცენარეთა განყოფილებებისა და ოჯახების
               სარკვევი“ იდეა გაჩნდა 2023 წელს ბოტანიკის საბაკალავრო კურსის
               სწავლებისას, მას შემდეგ, რაც კურსის ერთ-ერთმა სტუდენტმა
@@ -25,7 +25,7 @@ export default function AboutProjectSection() {
               ეტაპზე თბილისის მიდამოების ფლორის) ბოტანიკური ოჯახების სარკვევის
               ინტერაქტიური ელექტრონული ვარიანტის შექმნა.
             </p>
-            <p className="w-full flex-1 text-[14px] leading-[21px] text-charcoalGrey">
+            <p className="w-full flex-1 text-[14px] leading-[1.8] text-charcoalGrey">
               ელექტრონულ რესურსს საფუძველად უდევს მცენარეთა ბეჭდური სარკვევი -
               ა. მაყაშვილის „თბილისის მიდამოების ფლორის“ ორტომეული (1952, 1953),
               რომელიც თბილისის მიდამოებში აღრიცხულ მცენარეთა 1600-ზე მეტ
@@ -43,26 +43,26 @@ export default function AboutProjectSection() {
         </div>
 
         <div className="flex flex-col gap-1">
-          <p className="!leading-[1.8 ] w-full text-[14px] leading-[21px] text-charcoalGrey">
+          <p className="w-full text-[14px] leading-[1.8] text-charcoalGrey">
             თანამედროვე საკლასიფიკაციო სისტემებისგან ზოგიერთი განსხვავების
             მიუხედავად, ეს სარკვევი დამწყებთათვის ერთ-ერთ საუკეთესოდ მიგვაჩნია.
             სარკვევზე მუშაობის მომდევნო ეტაპებზე მასში შესული ოჯახების სისტემას
             თანამედროვე სტანდარტებს დავუახლოვებთ.
           </p>
-          <p className="!leading-[1.8 ] w-full text-[14px] leading-[21px] text-charcoalGrey">
+          <p className="w-full text-[14px] leading-[1.8] text-charcoalGrey">
             სარკვევში გამოყენებულია „უნილაბში“ ელექტრონული თუ ბეჭდური წყაროების
             დახმარებით შექმნილი ორიგინალური ილუსტრაციები (მაგ., Harris & Harris,
             2001), აგრეთვე, ილუსტრაციები მე-19 საუკუნის გერმანული წყაროებიდან
             (მაგ., Köhler, 1887; Thome, 1885).
           </p>
-          <p className="!leading-[1.8 ] w-full text-[14px] leading-[21px] text-charcoalGrey">
+          <p className="w-full text-[14px] leading-[1.8] text-charcoalGrey">
             მცენარეთა იდენტიფიკაციით დაინტერესებული ადამიანებისათვის მცენარეთა
             მრავალფეროვნების გაცნობის პირველ ეტაპზე ყველაზე მნიშვნელოვანი
             მცენარეთა მსხვილი ჯგუფებისა და მათი ოჯახების ამოცნობის უნარ-ჩვევების
             განვითარებაა და სწორედ ამ მიზანს ემსახურება ელექტრონული რესურსი
             „საქართველოს მცენარეთა განყოფილებებისა და ოჯახების სარკვევი“
           </p>
-          <p className="!leading-[1.8 ] w-full text-[14px] leading-[21px] text-charcoalGrey">
+          <p className="w-full text-[14px] leading-[1.8] text-charcoalGrey">
             სარკვევი განკუთვნილია საბაკალავრო საფეხურის სტუდენტებისათვის,
             რომლებსაც ეკითხებათ სასწავლო კურსი „ბოტანიკა“, ასევე ბოტანიკით
             დაინტერესებული მაგისტრანტების, დოქტორანტების, მკვლევარებისა და
