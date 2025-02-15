@@ -16,7 +16,7 @@ export default function HeroSection() {
         <h2 className="pb-4 text-[60px] font-bold leading-[1.3] text-white max-1150:text-[50px] max-950:text-[42px] max-850:pb-10 max-850:text-[32px] max-600:pb-5 max-600:text-[26px] max-450:text-[18px]">
           თბილისის მიდამოების ფლორის ოჯახების სარკვევი
         </h2>
-        <p className="pb-4 text-[14px] font-[400] !leading-[2] text-white max-950:text-[13px] max-850:hidden">
+        <p className="pb-4 text-[14px] font-[400] leading-[1.8] text-white max-950:text-[13px] max-850:hidden">
           ფოთლები არასდროს მწვანე არ არის, ქერქლოვანია, თავდაკბილულ ვაგინებად
           შეზრდილი და ღეროზე შემოხვეული. ღერო კარგად გამოსახული მრავალი
           მუხლთაშორისითაა, მწვანეა და რგოლურად დატოტვილი ან მკრთალია და მარტივი.
