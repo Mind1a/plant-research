@@ -2,7 +2,7 @@ import { projectAuthorInfo } from '../../../../constants/index';
 
 export default function ProjectAuthor() {
   return (
-    <div className="] mb-[96px] grid grid-cols-[300px_1fr] grid-rows-2 flex-col gap-0 max-1000:grid-cols-[240px_1fr] max-700:flex">
+    <section className="] mb-[96px] grid grid-cols-[300px_1fr] grid-rows-2 flex-col gap-0 max-1000:grid-cols-[240px_1fr] max-700:flex">
       <img
         src={projectAuthorInfo.image}
         alt="project author"
@@ -17,6 +17,6 @@ export default function ProjectAuthor() {
       <p className="col-start-2 row-start-2 mt-[-30px] text-justify text-body-md leading-[21px] text-charcoalGrey max-1000:row-span-2 max-1000:mt-0 max-1000:text-body-md">
         {projectAuthorInfo.description}
       </p>
-    </div>
+    </section>
   );
 }
