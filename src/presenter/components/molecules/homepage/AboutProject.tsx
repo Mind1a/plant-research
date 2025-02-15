@@ -21,7 +21,7 @@ export default function AboutProject() {
           label="სრულად"
           clasname="mt-6 max-700:mx-auto max-500:h-[32px] max-500:text-[12px]"
           variant="secondary"
-          onclick={() => navigate('/about')}
+          onclick={() => navigate('/about-project')}
         />
       </div>
       <div className="w-[580px] max-1050:w-[450px] max-900:w-[400px] max-800:w-[350px] max-700:mt-[23px] max-450:w-full max-450:px-5">
