@@ -15,6 +15,8 @@ import dribbbleIcon from '/assets/icons/dribble.svg';
 import behanceIcon from '/assets/icons/behance.svg';
 import discordIcon from '/assets/icons/discord.svg';
 import sortIcon from '/assets/icons/sort.svg';
+import chevronRightIcon from '/assets/icons/chevronright.svg';
+import chevronLeftIcon from '/assets/icons/chevronleft.svg';
 
 export {
   logo,
@@ -34,4 +36,6 @@ export {
   behanceIcon,
   discordIcon,
   sortIcon,
+  chevronRightIcon,
+  chevronLeftIcon,
 };
