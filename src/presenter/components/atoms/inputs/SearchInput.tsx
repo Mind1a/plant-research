@@ -13,13 +13,13 @@ export default function SearchInput({
 }) {
   const [search, setSearch] = useState('');
   return (
-    <div className="relative flex max-w-fit items-center">
+    <div className="relative flex w-full items-center">
       <input
         type="search"
         className={cn(
-          `h-12 w-[270px] rounded-md border border-transparent bg-lightGreen font-medium text-primary outline-none transition-all duration-300 placeholder:text-primary focus:border-primary focus:outline-none`,
+          `h-12 rounded-md border border-transparent bg-lightGreen font-medium text-primary outline-none transition-all duration-300 placeholder:text-primary focus:border-primary focus:outline-none`,
           classname,
-          variant === 'primary' ? 'pl-5 pr-11' : 'pl-11 pr-5'
+          variant === 'primary' ? 'w-[270px] pl-5 pr-11' : 'w-full pl-11 pr-5'
         )}
         value={search}
         placeholder={placeholder}
