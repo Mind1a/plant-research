@@ -8,7 +8,7 @@ export default function FamilieCard({ data }: { data: Plant }) {
       onClick={() => navigate(`/plant/${data.id}`)}
       className="group w-full cursor-pointer"
     >
-      <div className="h-[277px] rounded-xl border-2 border-transparent transition-colors duration-300 group-hover:border-primary">
+      <div className="h-[277px] rounded-xl border-2 border-transparent shadow-sm transition-colors duration-300 group-hover:border-primary">
         <img
           src="/assets/webp/plant.png"
           className="h-full w-full rounded-xl"

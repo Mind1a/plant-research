@@ -13,7 +13,6 @@ export default function FamiliesGrid() {
     <section className="my-4 grid grid-cols-5 gap-8">
       <FamilieCard data={plantData} />
       <FamilieCard data={plantData} />
-
       <FamilieCard data={plantData} />
       <FamilieCard data={plantData} />
       <FamilieCard data={plantData} />
