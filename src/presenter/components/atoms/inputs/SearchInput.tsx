@@ -2,21 +2,35 @@ import { useState } from 'react';
 import { cancelIcon, searchIcon } from '../../../assets';
 import { cn } from '../../../../lib/utils';
 
-export default function SearchInput({ classname }: { classname?: string }) {
+export default function SearchInput({
+  classname,
+  placeholder = 'ძებნა...',
+  variant = 'primary',
+}: {
+  classname?: string;
+  placeholder?: string;
+  variant?: 'primary' | 'secondary';
+}) {
   const [search, setSearch] = useState('');
   return (
-    <div className="relative flex items-center">
+    <div className="relative flex max-w-fit items-center">
       <input
         type="search"
         className={cn(
-          `h-12 w-[270px] rounded-md border border-transparent bg-lightGreen pl-5 pr-11 font-medium text-primary outline-none transition-all duration-300 placeholder:text-primary focus:border-primary focus:outline-none`,
-          classname
+          `h-12 w-[270px] rounded-md border border-transparent bg-lightGreen font-medium text-primary outline-none transition-all duration-300 placeholder:text-primary focus:border-primary focus:outline-none`,
+          classname,
+          variant === 'primary' ? 'pl-5 pr-11' : 'pl-11 pr-5'
         )}
         value={search}
-        placeholder="ძებნა..."
+        placeholder={placeholder}
         onChange={(e) => setSearch(e.target.value)}
       />
-      <div className="absolute right-[20px] cursor-pointer">
+      <div
+        className={cn(
+          `absolute cursor-pointer`,
+          variant === 'primary' ? 'right-[20px]' : 'left-[20px]'
+        )}
+      >
         {search.length > 0 ? (
           <img
             className="h-5 w-5"
