@@ -21,3 +21,11 @@ export type TeamMember = {
   };
   team: 'Project Management' | 'Design Team' | 'Development Team';
 };
+
+export type Plant = {
+  id: number;
+  name: string;
+  eng_name: string;
+  lat_name: string;
+  image: string;
+};
