@@ -5,7 +5,7 @@ import FamilieCard from './FamilieCard';
 
 export default function FamiliesGrid() {
   const { data, isLoading } = usePlants();
-  console.log(data);
+
   return (
     <section className="my-4">
       {isLoading ? (
