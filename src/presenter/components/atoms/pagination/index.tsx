@@ -1,15 +1,21 @@
 import { useNavigate, useSearchParams } from 'react-router';
 import { chevronLeftIcon, chevronRightIcon } from '../../../assets';
 import PaginationBtn from '../buttons/PaginationBtn';
-
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { usePageNumbers } from '../../../../hooks/use-page-numbers';
 
 export default function Pagination() {
   const [searchParams] = useSearchParams();
-  const [pageIndex, setPageIndex] = useState(searchParams.get('page') || 1);
+  const currentPage = Number(searchParams.get('page')) || 1;
+
+  const [pageIndex, setPageIndex] = useState(currentPage);
   const navigate = useNavigate();
 
-  const totalPages = 5;
+  useEffect(() => {
+    setPageIndex(currentPage);
+  }, [currentPage]);
+
+  const totalPages = 16;
 
   const onPageChange = (page: number) => {
     const params = new URLSearchParams(searchParams);
@@ -18,8 +24,7 @@ export default function Pagination() {
     setPageIndex(page);
   };
 
-
-  
+  const { pages } = usePageNumbers({ totalPages, pageIndex });
   return (
     <div className="mx-auto mt-8 flex w-fit items-center justify-center gap-2 rounded-[10px] border border-strokeGrey bg-white p-3">
       <PaginationBtn
@@ -30,14 +35,18 @@ export default function Pagination() {
       />
 
       <div className="flex items-center gap-2">
-        {[...Array(totalPages).keys()].map((page) => (
-          <PaginationBtn
-            key={page}
-            label={(page + 1).toString()}
-            onclick={() => onPageChange(page + 1)}
-            variant={Number(pageIndex) === page + 1 ? 'primary' : 'secondary'}
-          />
-        ))}
+        {pages.map((page, index) =>
+          typeof page === 'number' ? (
+            <PaginationBtn
+              key={index}
+              label={page.toString()}
+              onclick={() => onPageChange(page)}
+              variant={pageIndex === page ? 'primary' : 'secondary'}
+            />
+          ) : (
+            <PaginationBtn key={index} label="..." variant="quaternary" />
+          )
+        )}
       </div>
 
       <PaginationBtn

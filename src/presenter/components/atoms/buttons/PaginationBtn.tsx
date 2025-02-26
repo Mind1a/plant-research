@@ -9,7 +9,7 @@ export default function PaginationBtn({
 }: {
   label?: string;
   onclick?: () => void;
-  variant?: 'primary' | 'secondary' | 'tertiary';
+  variant?: 'primary' | 'secondary' | 'tertiary' | 'quaternary';
   imgSrc?: string;
   disabled?: boolean;
 }) {
@@ -24,6 +24,8 @@ export default function PaginationBtn({
           'border-strokeGrey bg-transparent text-lightBlack hover:border-primary',
         variant === 'tertiary' &&
           'h-8 w-8 border-strokeGrey bg-transparent text-lightBlack hover:border-primary',
+        variant === 'quaternary' &&
+          'cursor-default border-strokeGrey bg-transparent text-lightBlack',
         disabled && 'cursor-not-allowed opacity-50'
       )}
     >
