@@ -6,7 +6,7 @@ import { cn } from '../../../../lib/utils';
 
 const dropdownVariants = {
   hidden: { opacity: 0, top: '50%' },
-  visible: { opacity: 1, top: '100%' },
+  visible: { opacity: 1, top: '102%' },
 };
 const options = ['A-Z', 'Z-A'];
 export default function SortDropdown() {
@@ -23,7 +23,7 @@ export default function SortDropdown() {
     setIsOpen(false);
   };
   return (
-    <div className="relative">
+    <div>
       <button
         onClick={() => setIsOpen((prev) => !prev)}
         className="flex h-[48px] items-center gap-3 rounded-[36px] border border-lightGreen bg-lightGreen px-6 max-750:h-[40px] max-750:px-4"
@@ -51,7 +51,7 @@ export default function SortDropdown() {
             animate={'visible'}
             exit={'hidden'}
             transition={{ duration: 0.4, type: 'spring' }}
-            className="absolute mt-1 w-full bg-white p-5"
+            className="absolute right-0 mt-1 w-[222px] bg-white p-5 max-750:w-[100px]"
           >
             <ul>
               {options.map((option) => (
