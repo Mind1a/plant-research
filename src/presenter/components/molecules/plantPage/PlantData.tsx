@@ -8,27 +8,27 @@ export default function PlantData() {
   if (!plant) return <div>ვერ მოიძებნა</div>;
 
   return (
-    <div className="mt-[42px]">
-      <h2 className="text-title-sm font-bold text-charcoalGrey">
+    <div className="mt-[42px] max-650:mt-[38px]">
+      <h2 className="text-title-sm font-bold text-charcoalGrey max-750:text-[24px] max-650:text-[16px]">
         Rutaceae - ტეგანისებრნი
       </h2>
-      <section className="mt-6 flex h-[630px] w-full gap-12">
-        <div className="w-[500px]">
-          <div className="h-[600px] w-full rounded-[11px] border border-primary">
+      <section className="mt-6 flex w-full gap-12 max-950:gap-8 max-750:gap-6 max-650:flex-col-reverse">
+        <div className="flex w-[500px] flex-col max-950:w-[400px] max-750:w-[260px] max-650:mx-auto max-650:w-[450px] max-650:flex-col-reverse max-500:w-full">
+          <div className="plantDataHeight w-full rounded-[11px] border border-primary">
             <img
               src="/assets/webp/plant.png"
               className="h-full w-full rounded-[11px] object-cover"
               alt={plant.eng_name}
             />
           </div>
-          <div className="mt-1.5 flex w-full gap-1">
+          <div className="mt-1.5 flex w-full gap-1 max-650:mb-1.5">
             <p className="w-full truncate text-[14px] italic text-charcoalGrey">
-              {plant.lat_name} / {plant.eng_name} zzzzz
+              {plant.lat_name} / {plant.eng_name}
             </p>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto">
-          <p className="h-full leading-[200%]">
+        <div className="plantDataHeight flex-1 overflow-y-auto">
+          <p className="h-full leading-[200%] max-950:text-[15px] max-750:text-[14px] max-650:text-[12px]">
             გოგრისებრნი (ლათ. Cucurbitaceae) — ორლებნიან მცენარეთა ოჯახი.
             ერთწლოვანი, ზოგჯერ მრავალწლოვანი გართხმული ან მცოცავი ბალახები,
             იშვიათად ბუჩქები და პატარა ხეებია. აქვთ ხუთწევრიანი, უფრო ხშირად
