@@ -26,7 +26,7 @@ export default function Pagination() {
 
   const { pages } = usePageNumbers({ totalPages, pageIndex });
   return (
-    <div className="mx-auto mt-8 flex w-fit items-center justify-center gap-2 rounded-[10px] border border-strokeGrey bg-white p-3">
+    <div className="mx-auto mt-8 flex w-fit items-center justify-center gap-2 rounded-[10px] border border-strokeGrey bg-white p-3 max-450:gap-1.5 max-450:p-1.5">
       <PaginationBtn
         onclick={() => onPageChange(Number(pageIndex) - 1)}
         imgSrc={chevronLeftIcon}
@@ -34,7 +34,7 @@ export default function Pagination() {
         variant="tertiary"
       />
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 max-450:gap-1.5">
         {pages.map((page, index) =>
           typeof page === 'number' ? (
             <PaginationBtn

@@ -18,7 +18,7 @@ export default function PaginationBtn({
       onClick={onclick}
       disabled={disabled}
       className={cn(
-        `flex h-10 w-10 items-center justify-center rounded-md border border-transparent duration-300 font-case`,
+        `flex h-10 w-10 items-center justify-center rounded-md border border-transparent duration-300 font-case max-500:h-8 max-500:w-8 max-450:h-6 max-450:w-6 max-450:text-[12px]`,
         variant === 'primary' && 'bg-primary text-white hover:bg-[#00B083]',
         variant === 'secondary' &&
           'border-strokeGrey bg-transparent text-lightBlack hover:border-primary',
@@ -30,7 +30,7 @@ export default function PaginationBtn({
       )}
     >
       {variant === 'tertiary' ? (
-        <img src={imgSrc} className="w-2" alt="icon" />
+        <img src={imgSrc} className="w-2 max-450:w-1.5" alt="icon" />
       ) : (
         label
       )}

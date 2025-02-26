@@ -49,7 +49,10 @@ export default function SearchInput({
         {search.length > 0 ? (
           <img
             className="h-5 w-5"
-            onClick={() => setSearch('')}
+            onClick={() => {
+              setSearch('');
+              handleSearch('');
+            }}
             src={cancelIcon}
             alt="cancel"
           />
