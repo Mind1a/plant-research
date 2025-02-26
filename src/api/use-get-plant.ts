@@ -13,7 +13,6 @@ const fetchPlantById = async (id: string): Promise<Plant | null> => {
   }
 };
 
-// Custom hook to fetch a plant by ID
 export const useGetPlant = (): UseQueryResult<Plant | null, Error> => {
   const { id } = useParams<{ id: string }>();
   return useQuery<Plant | null, Error>({
