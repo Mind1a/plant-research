@@ -1,20 +1,22 @@
 import { useParams } from 'react-router';
 import API from './api';
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, UseQueryResult } from '@tanstack/react-query';
+import { Plant } from '../types';
 
-const fetchPlantById = async (id: string) => {
+const fetchPlantById = async (id: string): Promise<Plant | null> => {
   try {
-    const res = await API.get(`/plant/${id}`);
-    return res.data;
+    const res = await API.get<Plant[]>(`/plant/${id}`);
+    return res.data.length > 0 ? res.data[0] : null;
   } catch (error) {
     console.log('Error fetching plant by id', error);
     throw error;
   }
 };
 
-export const useGetPlant = () => {
-  const { id } = useParams();
-  return useQuery({
+// Custom hook to fetch a plant by ID
+export const useGetPlant = (): UseQueryResult<Plant | null, Error> => {
+  const { id } = useParams<{ id: string }>();
+  return useQuery<Plant | null, Error>({
     queryKey: ['plant', id],
     queryFn: () => fetchPlantById(id as string),
     enabled: !!id,
