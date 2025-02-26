@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { cancelIcon, searchIcon } from '../../../assets';
 import { cn } from '../../../../lib/utils';
+import { useNavigate } from 'react-router';
+import { useDebouncedCallback } from 'use-debounce';
 
 export default function SearchInput({
   classname,
@@ -12,6 +14,16 @@ export default function SearchInput({
   variant?: 'primary' | 'secondary';
 }) {
   const [search, setSearch] = useState('');
+  const navigate = useNavigate();
+  const handleSearch = useDebouncedCallback((value: string) => {
+    const params = new URLSearchParams();
+    if (value) {
+      params.set('search', value);
+    } else {
+      params.delete('search');
+    }
+    navigate(`?${params.toString()}`);
+  }, 350);
   return (
     <div className="relative flex w-full items-center">
       <input
@@ -23,7 +35,10 @@ export default function SearchInput({
         )}
         value={search}
         placeholder={placeholder}
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={(e) => {
+          setSearch(e.target.value);
+          handleSearch(e.target.value);
+        }}
       />
       <div
         className={cn(
