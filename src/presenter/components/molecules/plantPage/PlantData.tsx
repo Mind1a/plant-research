@@ -8,6 +8,7 @@ export default function PlantData() {
 
   if (isLoading) return <Loader />;
   if (!plant) return <div>ვერ მოიძებნა</div>;
+
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = '/assets/webp/plant.png';

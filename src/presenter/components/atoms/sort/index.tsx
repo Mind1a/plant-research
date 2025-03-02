@@ -8,16 +8,31 @@ const dropdownVariants = {
   hidden: { opacity: 0, top: '50%' },
   visible: { opacity: 1, top: '102%' },
 };
-const options = ['A-Z', 'Z-A'];
+const options = [
+  {
+    name: 'A-Z',
+    value: 'asc',
+  },
+  {
+    name: 'Z-A',
+    value: 'desc',
+  },
+];
 export default function SortDropdown() {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
-  const [active, setActive] = useState(searchParams.get('sort') || 'A-Z');
+
+  const sortParam = searchParams.get('sort');
+  const activeDisplayName = sortParam === 'desc' ? 'Z-A' : 'A-Z';
+
+  const [active, setActive] = useState(activeDisplayName);
+
   const [isOpen, setIsOpen] = useState(false);
 
   const handleSort = (option: string) => {
     const params = new URLSearchParams(searchParams);
-    setActive(option);
+    setActive(option === 'asc' ? 'A-Z' : 'Z-A');
+
     params.set('sort', option);
     navigate(`?${params.toString()}`);
     setIsOpen(false);
@@ -55,14 +70,14 @@ export default function SortDropdown() {
           >
             <ul>
               {options.map((option) => (
-                <li className="sortLi" key={option}>
+                <li className="sortLi" key={option.name}>
                   <button
                     onClick={() => {
-                      handleSort(option);
+                      handleSort(option.value);
                     }}
                     className="text-body font-medium text-charcoalGrey"
                   >
-                    {option}
+                    {option.name}
                   </button>
                 </li>
               ))}

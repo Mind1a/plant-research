@@ -7,7 +7,7 @@ export const usePageNumbers = ({
   totalPages: number;
   pageIndex: number;
 }) => {
-  const deviceSize = useDeviceSize(); // Now it's inside a hook
+  const deviceSize = useDeviceSize();
   const pages: (number | string)[] = [];
   const maxVisiblePages = deviceSize === 'xl' ? 4 : 2;
 
