@@ -15,7 +15,7 @@ export default function Pagination() {
     setPageIndex(currentPage);
   }, [currentPage]);
 
-  const totalPages = 16;
+  const totalPages = 5;
 
   const onPageChange = (page: number) => {
     const params = new URLSearchParams(searchParams);
