@@ -7,6 +7,7 @@ const fetchPlants = async (page: number, search: string, sort: string) => {
     const res = await API.get('/plant', {
       params: { page, search, sort },
     });
+    console.log(res.data);
     return res.data;
   } catch (error) {
     console.error('fetchPlants Error:', error);

@@ -3,6 +3,7 @@ import { chevronLeftIcon, chevronRightIcon } from '../../../assets';
 import PaginationBtn from '../buttons/PaginationBtn';
 import { useEffect, useState } from 'react';
 import { usePageNumbers } from '../../../../hooks/use-page-numbers';
+import { usePlants } from '../../../../api/use-get-plants';
 
 export default function Pagination() {
   const [searchParams] = useSearchParams();
@@ -15,8 +16,9 @@ export default function Pagination() {
     setPageIndex(currentPage);
   }, [currentPage]);
 
-  const totalPages = 5;
+  const { data } = usePlants();
 
+  const totalPages = data?.pagination.totalPages || 1;
   const onPageChange = (page: number) => {
     const params = new URLSearchParams(searchParams);
     params.set('page', page.toString());

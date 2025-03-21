@@ -6,6 +6,7 @@ import { Plant } from '../types';
 const fetchPlantById = async (id: string): Promise<Plant | null> => {
   try {
     const res = await API.get<Plant[]>(`/plant/${id}`);
+
     return res.data.length > 0 ? res.data[0] : null;
   } catch (error) {
     console.log('Error fetching plant by id', error);
