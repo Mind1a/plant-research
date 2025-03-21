@@ -2,10 +2,10 @@ import { useDeviceSize } from '../context/DeviseSizeProvider';
 
 export const usePageNumbers = ({
   totalPages,
-  pageIndex,
+  currentPage,
 }: {
   totalPages: number;
-  pageIndex: number;
+  currentPage: number;
 }) => {
   const deviceSize = useDeviceSize();
   const pages: (number | string)[] = [];
@@ -15,13 +15,13 @@ export const usePageNumbers = ({
     return { pages: Array.from({ length: totalPages }, (_, i) => i + 1) };
   }
 
-  if (pageIndex <= maxVisiblePages) {
+  if (currentPage <= maxVisiblePages) {
     pages.push(
       ...Array.from({ length: maxVisiblePages }, (_, i) => i + 1),
       '...',
       totalPages
     );
-  } else if (pageIndex >= totalPages - maxVisiblePages + 1) {
+  } else if (currentPage >= totalPages - maxVisiblePages + 1) {
     pages.push(
       1,
       '...',
@@ -34,9 +34,9 @@ export const usePageNumbers = ({
     pages.push(
       1,
       '...',
-      pageIndex - 1,
-      pageIndex,
-      pageIndex + 1,
+      currentPage - 1,
+      currentPage,
+      currentPage + 1,
       '...',
       totalPages
     );
