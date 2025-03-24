@@ -29,7 +29,7 @@ export default function WorkingTeam() {
                 key={index}
                 className="cardShadow h-full max-h-[112px] w-full rounded-lg border px-[23px] py-[15px]"
               >
-                <h3 className="mb-1">{member.name}</h3>
+                <h3 className="mb-1 font-case">{member.name}</h3>
                 <p className="text-xs leading-[18px]">{member.position}</p>
                 <div className="mt-3 flex items-center gap-2">
                   {member.socialLinks?.linkedin && (
