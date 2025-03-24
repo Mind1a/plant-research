@@ -8,7 +8,7 @@ export default function AboutProjectSection() {
         <h2 className="text-title-sm font-bold leading-[1.5] text-charcoalGrey max-1000:text-subtitle max-450:text-[16px]">
           პროექტის შესახებ
         </h2>
-        <div className="mb-1 mt-16 max-700:flex max-700:flex-col-reverse max-700:items-center">
+        <div className="mb-1 mt-16 max-1000:mt-10 max-700:mt-4 max-700:flex max-700:flex-col-reverse max-700:items-center">
           <img
             src={aboutProjectImg}
             alt=""
@@ -73,7 +73,7 @@ export default function AboutProjectSection() {
       <a
         href="https://linkedin.com/"
         target="_blank"
-        className="tranastion-all group mb-[96px] mt-[85px] flex h-12 w-fit items-center justify-center gap-2.5 rounded-[10px] border border-primary bg-lightGreen px-[18px] text-primary duration-300 font-case hover:border-transparent hover:bg-[#077A5D] hover:text-white max-1000:mx-auto"
+        className="tranastion-all group mb-[96px] mt-[85px] flex h-12 w-fit items-center justify-center gap-2.5 rounded-[10px] border border-primary bg-lightGreen px-[18px] text-primary duration-300 font-case hover:border-transparent hover:bg-[#077A5D] hover:text-white max-1000:mx-auto max-450:my-[60px] max-450:w-full"
       >
         <BookIcon className="transition-all duration-300 group-hover:[&>path]:fill-white" />
         <span>წიგნის ნახვა (PDF)</span>

@@ -53,8 +53,10 @@ export const teamMembers: TeamMember[] = [
     name: 'ქეთი აფრიამაშვილი',
     position: 'პოზიცია: UI/UX დიზაინერი',
     socialLinks: {
-      linkedin: 'https://linkedin.com',
+      linkedin: 'https://linkedin.com/',
+      dribbble: 'https://dribbble.com',
       behance: 'https://behance.net',
+      discord: 'https://discordapp.com',
     },
     team: 'Design Team',
   },
@@ -62,7 +64,9 @@ export const teamMembers: TeamMember[] = [
     name: 'ქეთი აფრიამაშვილი',
     position: 'პოზიცია: Front-end Developer',
     socialLinks: {
-      linkedin: 'https://linkedin.com',
+      linkedin: 'https://linkedin.com/',
+      dribbble: 'https://dribbble.com',
+      behance: 'https://behance.net',
       discord: 'https://discordapp.com',
     },
     team: 'Development Team',
@@ -70,6 +74,12 @@ export const teamMembers: TeamMember[] = [
   {
     name: 'ქეთი აფრიამაშვილი',
     position: 'პოზიცია: Back-end Developer',
+    socialLinks: {
+      linkedin: 'https://linkedin.com/',
+      dribbble: 'https://dribbble.com',
+      behance: 'https://behance.net',
+      discord: 'https://discordapp.com',
+    },
     team: 'Development Team',
   },
 ];
