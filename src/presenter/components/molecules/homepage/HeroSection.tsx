@@ -24,7 +24,7 @@ export default function HeroSection() {
           დატოტვილი ან მკრთალია და მარტივი. ღერო კარგად გამოსა
         </p>
         <Button
-          onclick={() => navigate('/learn-more')}
+          onclick={() => navigate('/sarkvevi')}
           label="გაიგე მეტი"
           clasname="max-450:text-[12px] max-450:h-[36px] max-450:px-2 max-450:gap-2"
         >
