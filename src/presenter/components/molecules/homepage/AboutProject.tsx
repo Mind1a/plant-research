@@ -19,7 +19,7 @@ export default function AboutProject() {
         </p>
         <Button
           label="სრულად"
-          clasname="mt-6 max-700:mx-auto max-500:h-[32px] max-500:text-[12px]"
+          clasname="mt-6 max-700:mx-auto max-500:h-[40px] max-500:text-[14px] max-450:w-full max-450:rounded-[6px]"
           variant="secondary"
           onclick={() => navigate('/about-project')}
         />
