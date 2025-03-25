@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router';
-import { aboutBanner, aboutBannerSm } from '../../../assets';
+import { aboutBanner } from '../../../assets';
 import Button from '../../atoms/buttons/Button';
 
 export default function AboutProject() {
@@ -25,16 +25,7 @@ export default function AboutProject() {
         />
       </div>
       <div className="w-[580px] max-1050:w-[450px] max-900:w-[400px] max-800:w-[350px] max-700:mt-[23px] max-450:w-full max-450:px-5">
-        <img
-          src={aboutBanner}
-          className="w-full max-700:hidden"
-          alt="about-project"
-        />
-        <img
-          src={aboutBannerSm}
-          className="hidden w-full max-700:block"
-          alt="about-project"
-        />
+        <img src={aboutBanner} className="w-full" alt="about-project" />
       </div>
     </section>
   );
