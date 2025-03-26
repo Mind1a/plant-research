@@ -7,11 +7,14 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-[480px] w-full rounded-[12px] max-950:h-[400px] max-850:h-[310px] max-600:h-[250px] max-450:h-[178px]">
-      <img
-        src={heroBanner}
-        alt="hero"
-        className="h-full w-full rounded-[12px] object-cover"
-      />
+      <div className="h-full w-full">
+        <img
+          src={heroBanner}
+          alt="hero"
+          className="h-full w-full rounded-[12px] object-cover"
+        />
+        <div className="heroBannerOverlay absolute left-0 top-0 h-full w-full rounded-[12px]"></div>
+      </div>
       <div className="absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 px-[98px] py-[78px] max-1200:px-[50px] max-1200:py-[40px] max-600:p-6 max-450:p-5">
         <h2 className="pb-4 text-[60px] font-bold leading-[1.3] text-white max-1150:text-[50px] max-950:text-[42px] max-850:pb-10 max-850:text-[32px] max-600:pb-5 max-600:text-[26px] max-450:text-[18px]">
           თბილისის მიდამოების ფლორის ოჯახების სარკვევი
@@ -24,7 +27,7 @@ export default function HeroSection() {
           დატოტვილი ან მკრთალია და მარტივი. ღერო კარგად გამოსა
         </p>
         <Button
-          onclick={() => navigate('/learn-more')}
+          onclick={() => navigate('/sarkvevi')}
           label="გაიგე მეტი"
           clasname="max-450:text-[12px] max-450:h-[36px] max-450:px-2 max-450:gap-2"
         >
