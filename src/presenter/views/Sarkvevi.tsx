@@ -4,11 +4,9 @@ import SarkveviInstruction from '../components/molecules/sarkvevipage/SarkveviIn
 
 export default function Sarkvevi() {
   return (
-    <main>
-      <PageWrapper classname="my-[72px] max-1000:my-[42px] max-500:my-[27px]">
-        <SarkveviHeader />
-        <SarkveviInstruction />
-      </PageWrapper>
-    </main>
+    <PageWrapper classname="my-[72px] max-1000:my-[42px] max-500:my-[27px]">
+      <SarkveviHeader />
+      <SarkveviInstruction />
+    </PageWrapper>
   );
 }

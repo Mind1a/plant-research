@@ -10,7 +10,7 @@ export default function Button({
 }: {
   label: string;
   onclick?: () => void;
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'tertiary';
   clasname?: string;
   children?: React.ReactNode;
   iconPosition?: 'left' | 'right';
@@ -24,7 +24,9 @@ export default function Button({
         variant === 'primary' &&
           'bg-primary px-[18px] text-white hover:bg-[#00B083]',
         variant === 'secondary' &&
-          'border-primary bg-lightGreen px-[18px] text-primary hover:border-transparent hover:bg-[#077A5D] hover:text-white'
+          'border-primary bg-lightGreen px-[18px] text-primary hover:border-transparent hover:bg-[#077A5D] hover:text-white',
+        variant === 'tertiary' &&
+          'border-primary bg-transparent px-[18px] text-primary hover:bg-primary hover:text-white'
       )}
     >
       {iconPosition === 'left' && children}

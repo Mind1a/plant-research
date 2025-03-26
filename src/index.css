@@ -143,3 +143,13 @@ input[type='search']::-webkit-search-cancel-button {
     }
   }
 }
+.sortLi:first-child {
+  @apply border-b border-strokeGrey pb-2.5;
+}
+.sortLi:last-child {
+  @apply pt-2.5;
+}
+
+.plantDataHeight {
+  @apply h-[600px] max-950:h-[450px] max-750:h-[355px] max-650:h-[400px];
+}
