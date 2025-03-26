@@ -7,8 +7,7 @@ const fetchPlantById = async (id?: string): Promise<Plant | null> => {
   if (!id) return null;
   try {
     const { data } = await API.get<Plant>(`/plant/${id}`);
-    console.log(data);
-    return data || null;
+    return Array.isArray(data) ? data[0] || null : data;
   } catch (error) {
     console.error(`Error fetching plant with ID ${id}:`, error);
     throw error;

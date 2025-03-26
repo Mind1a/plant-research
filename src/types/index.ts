@@ -26,6 +26,8 @@ export type Plant = {
   id: number;
   name: string;
   eng_name: string;
-  lat_name: string;
+  family_name: string;
+  family_name_geo: string;
+  description: string;
   image: string;
 };
