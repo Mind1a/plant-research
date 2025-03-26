@@ -4,14 +4,13 @@ import { keepPreviousData, useQuery } from '@tanstack/react-query';
 
 const fetchPlants = async (page: number, search: string, sort: string) => {
   try {
-    const res = await API.get('/plant', {
+    const { data } = await API.get('/plant', {
       params: { page, search, sort },
     });
-
-    return res.data;
+    return data;
   } catch (error) {
     console.error('fetchPlants Error:', error);
-    return [];
+    throw error;
   }
 };
 
@@ -26,5 +25,6 @@ export const usePlants = () => {
     queryFn: () => fetchPlants(page, search, sort),
     placeholderData: keepPreviousData,
     staleTime: 1000 * 60 * 5,
+    retry: 1,
   });
 };

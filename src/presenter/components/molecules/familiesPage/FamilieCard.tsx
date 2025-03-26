@@ -20,7 +20,7 @@ export default function FamilieCard({ data }: { data: Plant }) {
           {data.eng_name}
         </h3>
         <h4 className="text-body font-medium text-charcoalGrey max-900:text-[14px]">
-          {data.lat_name}
+          {data.name}
         </h4>
       </div>
     </div>
