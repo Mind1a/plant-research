@@ -9,7 +9,7 @@ const fetchPlantById = async (id: string): Promise<Plant | null> => {
 
     return res.data.length > 0 ? res.data[0] : null;
   } catch (error) {
-    console.log('Error fetching plant by id', error);
+    console.error('Error fetching plant by id', error);
     throw error;
   }
 };
