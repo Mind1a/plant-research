@@ -1,5 +1,5 @@
-import ProjectAuthor from '../../atoms/projectAuthor/ProjcetAuthor';
-import WorkingTeam from '../../atoms/workingTeam/WorkingTeam';
+import ProjectAuthor from './ProjcetAuthor';
+import WorkingTeam from './WorkingTeam';
 
 export default function WorkingTeamSection() {
   return (
