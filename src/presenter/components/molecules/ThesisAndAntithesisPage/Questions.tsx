@@ -31,7 +31,7 @@ const Questions: React.FC = () => {
     setQuestionList([1]);
   };
 
-  const questionsWithUUID = useMemo(() => {
+  const questionsId = useMemo(() => {
     return (
       data?.map((item) => ({
         ...item,
@@ -46,8 +46,8 @@ const Questions: React.FC = () => {
   return (
     <div>
       <QuestionButtons backButton={backButton} resetButton={resetButton} />
-      <div className="flex flex-wrap justify-center gap-[30px] m-auto mt-[16px] max-450:mt-[24px] max-750:mt-[36px]">
-        {questionsWithUUID.map((res) => (
+      <div className="m-auto mt-[16px] flex flex-wrap justify-center gap-[30px] max-750:mt-[36px] max-450:mt-[24px]">
+        {questionsId.map((res) => (
           <div
             onClick={() => {
               if (res.next_question_id) {
@@ -56,10 +56,9 @@ const Questions: React.FC = () => {
                 navigate(`/plant/${res.identified_plant_id}`);
               }
             }}
-            className="flex flex-col gap-[24px] max-750:gap-[12px] p-[24px] max-450:p-[16px] border border-[#DFE4EA] rounded-[10px] w-full max-w-[570px] min-h-[426px] max-750:min-h-[243px] cursor-pointer questionCardShadow"
+            className="questionCardShadow flex min-h-[426px] w-full max-w-[570px] cursor-pointer flex-col gap-[24px] rounded-[10px] border border-[#DFE4EA] p-[24px] max-750:min-h-[243px] max-750:gap-[12px] max-450:p-[16px]"
             key={res.uuid}
           >
-            <div className="bg-[#00000004] w-full min-h-[150px] max-450:min-h-[75px]"></div>
             <div className="max-h-[230px] overflow-y-auto">
               <p className="text-[12px] max-750:text-[14px]">{res.question}</p>
             </div>
