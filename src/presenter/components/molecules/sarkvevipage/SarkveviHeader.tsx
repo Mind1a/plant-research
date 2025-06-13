@@ -17,7 +17,7 @@ export default function SarkveviHeader() {
         პრაქტიკულ უნარ-ჩვევებს დაეუფლონ.
       </p>
       <Button
-        onclick={() => navigate('/')}
+        onclick={() => navigate('/thesisandantithesis')}
         label="ᲓᲐᲬᲧᲔᲑᲐ"
         clasname="mt-8 max-1000:h-[42px] max-1000:text-[13.5px] max-1000:gap-2 max-1000:px-4 max-450:w-full max-450:text-center"
       >
