@@ -29,3 +29,14 @@ export type Plant = {
   lat_name: string;
   image: string;
 };
+
+export type Question = {
+  question: string;
+  next_question_id: number;
+  identified_plant_id: number | null;
+};
+
+export type QuestionButtonsProps = {
+  backButton: () => void;
+  resetButton: () => void;
+};
