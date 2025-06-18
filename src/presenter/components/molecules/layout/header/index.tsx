@@ -1,28 +1,29 @@
 import { Link, NavLink } from 'react-router';
 import { NavLinks } from '../../../../../constants';
-import { fullLogo, searchIcon } from '../../../../assets';
+import { fullLogo } from '../../../../assets';
+// import { searchIcon } from '../../../../assets';
 import PageWrapper from '../../../atoms/PageWrapper';
 import { cn } from '../../../../../lib/utils';
-import SearchInput from '../../../atoms/inputs/SearchInput';
+// import SearchInput from '../../../atoms/inputs/SearchInput';
 import BurgerBtn from '../../../atoms/buttons/BurgerBtn';
 import BurgerMenuIcon from '../../../atoms/burgerMenuIcon';
 import { useState } from 'react';
 import MobileMenu from './mobileMenu';
-import BurgerBtnSearch from '../../../atoms/buttons/BurgerBtnSearch';
+// import BurgerBtnSearch from '../../../atoms/buttons/BurgerBtnSearch';
 import { AnimatePresence } from 'framer-motion';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  // const [isSearchOpen, setIsSearchOpen] = useState(false);
   const handleToggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
-  const handleOpenSearch = () => {
-    setIsSearchOpen(true);
-  };
-  const handleCloseSearch = () => {
-    setIsSearchOpen(false);
-  };
+  // const handleOpenSearch = () => {
+  //   setIsSearchOpen(true);
+  // };
+  // const handleCloseSearch = () => {
+  //   setIsSearchOpen(false);
+  // };
   const handleCloseMenu = () => {
     setIsMenuOpen(false);
   };
@@ -56,11 +57,11 @@ export default function Header() {
                   </li>
                 ))}
               </ul>
-              <div className="max-1050:hidden">
+              {/* <div className="max-1050:hidden">
                 <SearchInput />
-              </div>
+              </div> */}
               <div className="hidden items-center gap-2.5 max-1050:flex">
-                <div className="max-550:hidden">
+                {/* <div className="max-550:hidden">
                   <BurgerBtnSearch
                     isOpen={isSearchOpen}
                     onblur={handleCloseSearch}
@@ -68,7 +69,7 @@ export default function Header() {
                   >
                     <img src={searchIcon} className="h-4 w-4" alt="search" />
                   </BurgerBtnSearch>
-                </div>
+                </div> */}
                 <BurgerBtn isOpen={isMenuOpen} onclick={handleToggleMenu}>
                   <BurgerMenuIcon isMenuOpen={isMenuOpen} />
                 </BurgerBtn>
