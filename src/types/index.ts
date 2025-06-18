@@ -40,3 +40,7 @@ export type QuestionButtonsProps = {
   backButton: () => void;
   resetButton: () => void;
 };
+
+export type ImageZoomModalProps = {
+  onClose: () => void;
+};

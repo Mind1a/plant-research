@@ -28,7 +28,7 @@ export default function Header() {
   };
   return (
     <header>
-      <div className="relative z-10 flex h-[84px] items-center border-b border-strokeGrey bg-white max-1050:h-[64px]">
+      <div className="flex h-[84px] items-center border-b border-strokeGrey bg-white max-1050:h-[64px]">
         <PageWrapper>
           <div className="flex items-center justify-between">
             <Link to={'/'}>
