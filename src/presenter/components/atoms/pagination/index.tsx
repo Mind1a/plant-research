@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router';
 import { chevronLeftIcon, chevronRightIcon } from '../../../assets';
 import PaginationBtn from '../buttons/PaginationBtn';
@@ -18,7 +19,13 @@ export default function Pagination() {
     params.set('page', page.toString());
     navigate(`?${params.toString()}`);
   };
+
   const { pages } = usePageNumbers({ totalPages, currentPage });
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [searchParams]);
+
   return (
     <div className="mx-auto mt-8 flex w-fit items-center justify-center gap-2 rounded-[10px] border border-strokeGrey bg-white p-3 max-450:gap-1.5 max-450:p-1.5">
       <PaginationBtn

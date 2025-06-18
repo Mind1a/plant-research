@@ -59,7 +59,7 @@ const Questions: React.FC = () => {
             className="questionCardShadow flex min-h-[426px] w-full max-w-[570px] cursor-pointer flex-col gap-[24px] rounded-[10px] border border-[#DFE4EA] p-[24px] max-750:min-h-[243px] max-750:gap-[12px] max-450:p-[16px]"
             key={res.uuid}
           >
-            <div className="max-h-[230px] overflow-y-auto">
+            <div className="min-h-[230px] overflow-y-auto">
               <p className="text-[12px] max-750:text-[14px]">{res.question}</p>
             </div>
           </div>
