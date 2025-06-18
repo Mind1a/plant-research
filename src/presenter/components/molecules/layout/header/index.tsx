@@ -27,54 +27,56 @@ export default function Header() {
     setIsMenuOpen(false);
   };
   return (
-    <header className="flex h-[84px] items-center border-b border-strokeGrey bg-white max-1050:h-[64px]">
-      <PageWrapper>
-        <div className="flex items-center justify-between">
-          <Link to={'/'}>
-            <img
-              className="w-[157px] max-1050:w-[125px]"
-              src={fullLogo}
-              alt="logo"
-            />
-          </Link>
-          <div className="flex items-center gap-[30px]">
-            <ul className="flex items-center gap-6 max-1050:hidden">
-              {NavLinks.map((link) => (
-                <li key={link.id}>
-                  <NavLink
-                    className={({ isActive }) =>
-                      cn(
-                        'text-body font-medium leading-[150%]',
-                        isActive ? 'active text-primary' : 'text-charcoalGrey'
-                      )
-                    }
-                    to={link.url}
-                  >
-                    {link.title}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-            <div className="max-1050:hidden">
-              <SearchInput />
-            </div>
-            <div className="hidden items-center gap-2.5 max-1050:flex">
-              <div className="max-550:hidden">
-                <BurgerBtnSearch
-                  isOpen={isSearchOpen}
-                  onblur={handleCloseSearch}
-                  onclick={handleOpenSearch}
-                >
-                  <img src={searchIcon} className="h-4 w-4" alt="search" />
-                </BurgerBtnSearch>
+    <header>
+      <div className="relative z-10 flex h-[84px] items-center border-b border-strokeGrey bg-white max-1050:h-[64px]">
+        <PageWrapper>
+          <div className="flex items-center justify-between">
+            <Link to={'/'}>
+              <img
+                className="w-[157px] max-1050:w-[125px]"
+                src={fullLogo}
+                alt="logo"
+              />
+            </Link>
+            <div className="flex items-center gap-[30px]">
+              <ul className="flex items-center gap-6 max-1050:hidden">
+                {NavLinks.map((link) => (
+                  <li key={link.id}>
+                    <NavLink
+                      className={({ isActive }) =>
+                        cn(
+                          'text-body font-medium leading-[150%]',
+                          isActive ? 'active text-primary' : 'text-charcoalGrey'
+                        )
+                      }
+                      to={link.url}
+                    >
+                      {link.title}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+              <div className="max-1050:hidden">
+                <SearchInput />
               </div>
-              <BurgerBtn isOpen={isMenuOpen} onclick={handleToggleMenu}>
-                <BurgerMenuIcon isMenuOpen={isMenuOpen} />
-              </BurgerBtn>
+              <div className="hidden items-center gap-2.5 max-1050:flex">
+                <div className="max-550:hidden">
+                  <BurgerBtnSearch
+                    isOpen={isSearchOpen}
+                    onblur={handleCloseSearch}
+                    onclick={handleOpenSearch}
+                  >
+                    <img src={searchIcon} className="h-4 w-4" alt="search" />
+                  </BurgerBtnSearch>
+                </div>
+                <BurgerBtn isOpen={isMenuOpen} onclick={handleToggleMenu}>
+                  <BurgerMenuIcon isMenuOpen={isMenuOpen} />
+                </BurgerBtn>
+              </div>
             </div>
           </div>
-        </div>
-      </PageWrapper>
+        </PageWrapper>
+      </div>
       <AnimatePresence>
         {isMenuOpen && <MobileMenu closeMenu={handleCloseMenu} />}
       </AnimatePresence>
