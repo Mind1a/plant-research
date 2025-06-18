@@ -18,14 +18,20 @@ export default function PlantData() {
   if (!plant) return <div>ვერ მოიძებნა</div>;
 
   const handleDownload = () => {
+    const plantImg = plant.image
+      ? `https://tpk.iliauni.edu.ge/static/${plant.image}`
+      : '/assets/webp/plant.svg';
     const link = document.createElement('a');
-    link.href = '/assets/webp/plant.png';
+    link.href = plantImg;
+    link.target = '_blank';
     link.download = plant.eng_name || 'plant';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
-
+  const plantImg = plant.image
+    ? `https://tpk.iliauni.edu.ge/static/${plant.image}`
+    : '/assets/webp/plant.svg';
   return (
     <div className="mt-[42px] max-650:mt-[38px]">
       {isZoom ? (
@@ -43,9 +49,9 @@ export default function PlantData() {
           </h2>
           <section className="mt-6 flex w-full gap-12 max-950:gap-8 max-750:gap-6 max-650:flex-col-reverse">
             <div className="flex w-[500px] flex-col max-950:w-[400px] max-750:w-[260px] max-650:mx-auto max-650:w-[450px] max-650:flex-col-reverse max-500:w-full">
-              <div className="plantDataHeight relative w-full rounded-[11px] border border-primary">
+              <div className="plantDataHeight relative w-full rounded-[11px]">
                 <img
-                  src="/assets/webp/plant.png"
+                  src={plantImg}
                   className="h-full w-full rounded-[11px] object-cover"
                   alt={plant.eng_name}
                 />

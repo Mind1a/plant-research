@@ -8,9 +8,9 @@ export default function IconBtn({
   return (
     <button
       onClick={onclick}
-      className="flex h-[22px] w-[22px] items-center justify-center rounded-md bg-primary transition-all duration-300 hover:bg-[#00B083]"
+      className="flex h-[42px] w-[42px] items-center justify-center rounded-md bg-primary transition-all duration-300 hover:bg-[#00B083]"
     >
-      <img src={imgSrc} className="h-3 w-3" alt="button" />
+      <img src={imgSrc} className="h-[22px] w-[22px]" alt="button" />
     </button>
   );
 }

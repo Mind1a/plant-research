@@ -2,6 +2,8 @@ import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 import { RxZoomIn, RxZoomOut, RxCross1 } from 'react-icons/rx';
 import { TbZoomReplace } from 'react-icons/tb';
 import { ImageZoomModalProps } from '../../../../types';
+import { useGetPlant } from '../../../../api/use-get-plant';
+import Loader from '../../atoms/loader/Loader';
 
 const zoomButtons = [
   {
@@ -19,6 +21,14 @@ const zoomButtons = [
 ];
 
 const ImageZoomModal = ({ onClose }: ImageZoomModalProps) => {
+  const { data: plant, isLoading } = useGetPlant();
+
+  if (isLoading) return <Loader />;
+  if (!plant) return <div>ვერ მოიძებნა</div>;
+
+  const plantImg = plant.image
+    ? `https://tpk.iliauni.edu.ge/static/${plant.image}`
+    : '/assets/webp/plant.svg';
   return (
     <div className="relative z-10 min-h-[700px] w-full max-w-[1170px] overflow-hidden rounded-[11px] border border-[#13C296] bg-white shadow-2xl max-750:min-h-[450px] max-400:min-h-[400px]">
       <TransformWrapper
@@ -43,7 +53,7 @@ const ImageZoomModal = ({ onClose }: ImageZoomModalProps) => {
                 <div className="flex min-h-[600px] w-full max-w-[450px] cursor-grab items-center justify-center border active:cursor-grabbing max-600:min-h-[450px] max-600:max-w-[350px]">
                   <TransformComponent>
                     <img
-                      src="/assets/webp/plant.png"
+                      src={plantImg}
                       alt="Zoomed plant"
                       className="h-full min-h-[600px] w-full max-w-[450px] object-contain max-750:min-h-[500px] max-600:min-h-[450px]"
                     />
