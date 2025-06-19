@@ -14,6 +14,8 @@ export default function PlantData() {
 
   const { data: plant, isLoading } = useGetPlant();
 
+  console.log(plant);
+
   if (isLoading) return <Loader />;
   if (!plant) return <div>ვერ მოიძებნა</div>;
 
@@ -45,7 +47,7 @@ export default function PlantData() {
       ) : (
         <>
           <h2 className="text-title-sm font-bold text-charcoalGrey max-750:text-[24px] max-650:text-[16px]">
-            Rutaceae - ტეგანისებრნი
+            {plant.eng_name} - {plant.name}
           </h2>
           <section className="mt-6 flex w-full gap-12 max-950:gap-8 max-750:gap-6 max-650:flex-col-reverse">
             <div className="flex w-[500px] flex-col max-950:w-[400px] max-750:w-[260px] max-650:mx-auto max-650:w-[450px] max-650:flex-col-reverse max-500:w-full">
@@ -62,7 +64,7 @@ export default function PlantData() {
               </div>
               <div className="mt-1.5 flex w-full gap-1 max-650:mb-1.5">
                 <p className="w-full truncate text-[14px] italic text-charcoalGrey">
-                  {plant.lat_name} / {plant.eng_name}
+                  {plant.family_name} / {plant.family_name_geo}
                 </p>
               </div>
             </div>
