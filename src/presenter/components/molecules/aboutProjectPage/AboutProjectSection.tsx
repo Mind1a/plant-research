@@ -71,7 +71,7 @@ export default function AboutProjectSection() {
         </div>
       </section>
       <a
-        href="https://linkedin.com/"
+        href="https://iverieli.nplg.gov.ge/bitstream/1234/486760/1/Tbilisis_Midamoebis_Flora_1952_Wigni_I.pdf"
         target="_blank"
         className="tranastion-all duration-50 group mb-[96px] mt-[85px] flex h-12 w-fit items-center justify-center gap-2.5 rounded-[10px] border border-[#13C296] bg-[#13C29633] px-[18px] text-[#077A5D] ease-in-out font-case hover:border-[#13C296] hover:border-transparent hover:bg-[#0EA580] hover:text-white max-1000:mx-auto max-450:my-[60px] max-450:w-full"
       >
