@@ -29,6 +29,8 @@ export type Plant = {
   lat_name: string;
   image: string;
   description?: string;
+  family_name_geo: string;
+  family_name: string;
 };
 
 export type Question = {
