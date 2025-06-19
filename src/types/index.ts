@@ -28,6 +28,7 @@ export type Plant = {
   eng_name: string;
   lat_name: string;
   image: string;
+  description?: string;
 };
 
 export type Question = {
