@@ -6,7 +6,7 @@ export default function PageLayout() {
   return (
     <>
       <Header />
-      <main className="flex-grow">
+      <main className="flex flex-grow flex-col">
         <Outlet />
       </main>
       <Footer />
