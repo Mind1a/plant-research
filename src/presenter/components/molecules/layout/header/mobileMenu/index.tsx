@@ -36,7 +36,7 @@ export default function MobileMenu({ closeMenu }: { closeMenu: () => void }) {
         <PageWrapper>
           <motion.div>
             <ul className="max-550:py-y flex flex-col items-start gap-6 py-5 max-550:gap-4">
-              <div className="hidden w-full max-550:block">
+              <div className="hidden w-full">
                 <SearchInput classname="w-full" />
               </div>
               {NavLinks.map((link) => (
