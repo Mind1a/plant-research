@@ -60,6 +60,24 @@ export const teamMembers: TeamMember[] = [
     team: 'Design Team',
   },
   {
+    name: 'სალომე მოსიავა',
+    position: 'პოზიცია: ილუსტრატორი',
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/mariamdekanoidze/',
+      behance: 'https://www.behance.net/mariami9',
+    },
+    team: 'Design Team',
+  },
+  {
+    name: 'მარიამ დეკანოიძე',
+    position: 'პოზიცია: ილუსტრატორი',
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/mariamdekanoidze/',
+      behance: 'https://www.behance.net/mariami9',
+    },
+    team: 'Design Team',
+  },
+  {
     name: 'მარიამ ინასარიძე',
     position: 'პოზიცია: ილუსტრატორი',
     socialLinks: {

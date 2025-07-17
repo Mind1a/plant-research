@@ -56,7 +56,7 @@ const Questions: React.FC = () => {
                 navigate(`/plant/${res.identified_plant_id}`);
               }
             }}
-            className="questionCardShadow flex min-h-[426px] w-full max-w-[570px] cursor-pointer flex-col gap-[24px] rounded-[10px] border border-[#DFE4EA] p-[24px] max-750:min-h-[243px] max-750:gap-[12px] max-450:p-[16px]"
+            className="questionCardShadow flex min-h-[426px] w-full max-w-[570px] cursor-pointer flex-col gap-[24px] rounded-[10px] border border-[#DFE4EA] bg-[#FFFFFF] p-[24px] transition-all duration-150 ease-in-out hover:bg-[#f0f0f075] max-750:min-h-[243px] max-750:gap-[12px] max-450:p-[16px]"
             key={res.uuid}
           >
             <div className="min-h-[230px] overflow-y-auto">
