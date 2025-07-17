@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { sortIcon } from '../../../assets';
-import { AnimatePresence, motion } from 'framer-motion';
 import { useNavigate, useSearchParams } from 'react-router';
+
+import { AnimatePresence, motion } from 'framer-motion';
+
 import { cn } from '../../../../lib/utils';
+import { sortIcon } from '../../../assets';
 
 const dropdownVariants = {
   hidden: { opacity: 0, top: '50%' },

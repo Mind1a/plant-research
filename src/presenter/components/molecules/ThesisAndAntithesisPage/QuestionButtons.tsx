@@ -1,5 +1,5 @@
-import Button from '../../atoms/buttons/Button';
 import { QuestionButtonsProps } from '../../../../types';
+import Button from '../../atoms/buttons/Button';
 
 const QuestionButtons = ({ backButton, resetButton }: QuestionButtonsProps) => {
   return (

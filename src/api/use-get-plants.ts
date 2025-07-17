@@ -1,6 +1,8 @@
 import { useSearchParams } from 'react-router';
-import API from './api';
+
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
+
+import API from './api';
 
 const fetchPlants = async (page: number, search: string, sort: string) => {
   try {

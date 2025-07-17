@@ -1,11 +1,13 @@
+import { useMemo, useState } from 'react';
+import { useNavigate } from 'react-router';
+
 import { useQuery } from '@tanstack/react-query';
+import { v4 as uuidv4 } from 'uuid';
+
 import { fetchquestions } from '../../../../api/use-get-question';
 import { Question } from '../../../../types';
-import { useState, useMemo } from 'react';
 import Loader from '../../atoms/loader/Loader';
-import { useNavigate } from 'react-router';
 import QuestionButtons from './QuestionButtons';
-import { v4 as uuidv4 } from 'uuid';
 
 const Questions: React.FC = () => {
   const navigate = useNavigate();

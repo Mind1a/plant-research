@@ -1,4 +1,7 @@
+import { ProjectAuthorimg } from '../presenter/assets';
 import { Navlink } from '../types';
+import { ProjectAuthorType } from '../types';
+import { TeamMember } from '../types';
 
 export const NavLinks: Navlink[] = [
   {
@@ -22,8 +25,6 @@ export const NavLinks: Navlink[] = [
     url: '/about-project',
   },
 ];
-import { ProjectAuthorType } from '../types';
-import { ProjectAuthorimg } from '../presenter/assets';
 
 export const projectAuthorInfo: ProjectAuthorType = {
   image: ProjectAuthorimg,
@@ -36,7 +37,6 @@ export const projectAuthorInfo: ProjectAuthorType = {
   ასევე რამდენიმე ათეული სამეცნიერო სტატია ადგილობრივ და უცხოურ ჟურნალებში.`,
 };
 
-import { TeamMember } from '../types';
 export const teamMembers: TeamMember[] = [
   {
     name: 'თამარა გიგინეიშვილი',

@@ -1,9 +1,9 @@
-import { teamMembers } from '../../../../constants/index';
-import { TeamMember } from '../../../../types';
-import LinkedInIcon from '../../../../assets/svgs/linkedIn.svg?react';
-import DribbbleIcon from '../../../../assets/svgs/dribble.svg?react';
 import BehanceIcon from '../../../../assets/svgs/behance.svg?react';
 import DiscordIcon from '../../../../assets/svgs/discrod.svg?react';
+import DribbbleIcon from '../../../../assets/svgs/dribble.svg?react';
+import LinkedInIcon from '../../../../assets/svgs/linkedIn.svg?react';
+import { teamMembers } from '../../../../constants/index';
+import { TeamMember } from '../../../../types';
 
 export default function WorkingTeam() {
   const groupedTeams: Record<

@@ -1,8 +1,10 @@
 import { useState } from 'react';
-import { cancelIcon, searchIcon } from '../../../assets';
-import { cn } from '../../../../lib/utils';
 import { useNavigate } from 'react-router';
+
 import { useDebouncedCallback } from 'use-debounce';
+
+import { cn } from '../../../../lib/utils';
+import { cancelIcon, searchIcon } from '../../../assets';
 
 export default function SearchInput({
   classname,

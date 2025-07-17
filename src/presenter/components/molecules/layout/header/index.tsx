@@ -1,16 +1,18 @@
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router';
+
+// import BurgerBtnSearch from '../../../atoms/buttons/BurgerBtnSearch';
+import { AnimatePresence } from 'framer-motion';
+
 import { NavLinks } from '../../../../../constants';
+import { cn } from '../../../../../lib/utils';
 import { fullLogo } from '../../../../assets';
 // import { searchIcon } from '../../../../assets';
 import PageWrapper from '../../../atoms/PageWrapper';
-import { cn } from '../../../../../lib/utils';
+import BurgerMenuIcon from '../../../atoms/burgerMenuIcon';
 // import SearchInput from '../../../atoms/inputs/SearchInput';
 import BurgerBtn from '../../../atoms/buttons/BurgerBtn';
-import BurgerMenuIcon from '../../../atoms/burgerMenuIcon';
-import { useState } from 'react';
 import MobileMenu from './mobileMenu';
-// import BurgerBtnSearch from '../../../atoms/buttons/BurgerBtnSearch';
-import { AnimatePresence } from 'framer-motion';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -1,8 +1,10 @@
 import { NavLink } from 'react-router';
+
+import { motion } from 'framer-motion';
+
 import { NavLinks } from '../../../../../../constants';
 import { cn } from '../../../../../../lib/utils';
 import PageWrapper from '../../../../atoms/PageWrapper';
-import { motion } from 'framer-motion';
 import SearchInput from '../../../../atoms/inputs/SearchInput';
 
 export default function MobileMenu({ closeMenu }: { closeMenu: () => void }) {

@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router';
+
 import { Plant } from '../../../../types';
 
 export default function FamilieCard({ data }: { data: Plant }) {
