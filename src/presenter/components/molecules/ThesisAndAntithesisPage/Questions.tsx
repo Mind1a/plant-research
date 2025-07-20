@@ -42,30 +42,35 @@ const Questions: React.FC = () => {
     );
   }, [data]);
 
-  if (isLoading) return <Loader />;
   if (error) return <p>Error: {error.message}</p>;
 
   return (
     <div>
       <QuestionButtons backButton={backButton} resetButton={resetButton} />
       <div className="m-auto mt-[16px] flex flex-wrap justify-center gap-[30px] max-750:mt-[36px] max-450:mt-[24px]">
-        {questionsId.map((res) => (
-          <div
-            onClick={() => {
-              if (res.next_question_id) {
-                setQuestionList((prev) => [...prev, res.next_question_id]);
-              } else {
-                navigate(`/plant/${res.identified_plant_id}`);
-              }
-            }}
-            className="questionCardShadow flex min-h-[426px] w-full max-w-[570px] cursor-pointer flex-col gap-[24px] rounded-[10px] border border-[#DFE4EA] bg-[#FFFFFF] p-[24px] transition-all duration-150 ease-in-out hover:bg-[#f0f0f075] max-750:min-h-[243px] max-750:gap-[12px] max-450:p-[16px]"
-            key={res.uuid}
-          >
-            <div className="min-h-[230px] overflow-y-auto">
-              <p className="text-[12px] max-750:text-[14px]">{res.question}</p>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          questionsId.map((res) => (
+            <div
+              onClick={() => {
+                if (res.next_question_id) {
+                  setQuestionList((prev) => [...prev, res.next_question_id]);
+                } else {
+                  navigate(`/plant/${res.identified_plant_id}`);
+                }
+              }}
+              className="questionCardShadow flex min-h-[426px] w-full max-w-[570px] cursor-pointer flex-col gap-[24px] rounded-[10px] border border-[#DFE4EA] bg-[#FFFFFF] p-[24px] transition-all duration-150 ease-in-out hover:bg-[#f0f0f075] max-750:min-h-[243px] max-750:gap-[12px] max-450:p-[16px]"
+              key={res.uuid}
+            >
+              <div className="min-h-[230px] overflow-y-auto">
+                <p className="text-[12px] max-750:text-[14px]">
+                  {res.question}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        )}
       </div>
     </div>
   );
