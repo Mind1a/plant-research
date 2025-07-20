@@ -51,6 +51,12 @@ export const teamMembers: TeamMember[] = [
     team: 'Project Management',
   },
   {
+    name: 'ნინო ბენიძე',
+    position: 'პოზიცია: პროექტის მენეჯერი',
+    socialLinks: {},
+    team: 'Project Management',
+  },
+  {
     name: 'მარიამ დეკანოიძე',
     position: 'პოზიცია: ილუსტრატორი',
     socialLinks: {
@@ -86,7 +92,6 @@ export const teamMembers: TeamMember[] = [
     },
     team: 'Design Team',
   },
-
   {
     name: 'გიორგი კვარაცხელია',
     position: 'პოზიცია: Back-end Developer',
@@ -121,6 +126,12 @@ export const teamMembers: TeamMember[] = [
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/tornike-esitashvili-630b192a4/',
     },
+    team: 'Development Team',
+  },
+  {
+    name: 'თეონა ზავრაშვილი',
+    position: 'პოზიცია: Front-end Developer',
+    socialLinks: {},
     team: 'Development Team',
   },
 ];
