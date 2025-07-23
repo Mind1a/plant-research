@@ -1,4 +1,7 @@
+import { ProjectAuthorimg } from '../presenter/assets';
 import { Navlink } from '../types';
+import { ProjectAuthorType } from '../types';
+import { TeamMember } from '../types';
 
 export const NavLinks: Navlink[] = [
   {
@@ -22,8 +25,6 @@ export const NavLinks: Navlink[] = [
     url: '/about-project',
   },
 ];
-import { ProjectAuthorType } from '../types';
-import { ProjectAuthorimg } from '../presenter/assets';
 
 export const projectAuthorInfo: ProjectAuthorType = {
   image: ProjectAuthorimg,
@@ -36,7 +37,6 @@ export const projectAuthorInfo: ProjectAuthorType = {
   ასევე რამდენიმე ათეული სამეცნიერო სტატია ადგილობრივ და უცხოურ ჟურნალებში.`,
 };
 
-import { TeamMember } from '../types';
 export const teamMembers: TeamMember[] = [
   {
     name: 'თამარა გიგინეიშვილი',
@@ -49,6 +49,30 @@ export const teamMembers: TeamMember[] = [
     position: 'პოზიცია: პროექტის მენეჯერი',
     socialLinks: {},
     team: 'Project Management',
+  },
+  {
+    name: 'ნინო ბენიძე',
+    position: 'პოზიცია: პროექტის მენეჯერი',
+    socialLinks: {},
+    team: 'Project Management',
+  },
+  {
+    name: 'მარიამ დეკანოიძე',
+    position: 'პოზიცია: ილუსტრატორი',
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/mariamdekanoidze/',
+      behance: 'https://www.behance.net/mariami9',
+    },
+    team: 'Design Team',
+  },
+  {
+    name: 'სალომე მოსიავა',
+    position: 'პოზიცია: ილუსტრატორი',
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/mariamdekanoidze/',
+      behance: 'https://www.behance.net/mariami9',
+    },
+    team: 'Design Team',
   },
   {
     name: 'მარიამ დეკანოიძე',
@@ -68,7 +92,6 @@ export const teamMembers: TeamMember[] = [
     },
     team: 'Design Team',
   },
-
   {
     name: 'გიორგი კვარაცხელია',
     position: 'პოზიცია: Back-end Developer',
@@ -103,6 +126,12 @@ export const teamMembers: TeamMember[] = [
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/tornike-esitashvili-630b192a4/',
     },
+    team: 'Development Team',
+  },
+  {
+    name: 'თეონა ზავრაშვილი',
+    position: 'პოზიცია: Front-end Developer',
+    socialLinks: {},
     team: 'Development Team',
   },
 ];

@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router';
+
 import { aboutBanner } from '../../../assets';
 import Button from '../../atoms/buttons/Button';
 

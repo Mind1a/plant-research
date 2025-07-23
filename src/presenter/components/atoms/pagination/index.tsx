@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router';
+
+import { usePlants } from '../../../../api/use-get-plants';
+import { usePageNumbers } from '../../../../hooks/use-page-numbers';
 import { chevronLeftIcon, chevronRightIcon } from '../../../assets';
 import PaginationBtn from '../buttons/PaginationBtn';
-import { usePageNumbers } from '../../../../hooks/use-page-numbers';
-import { usePlants } from '../../../../api/use-get-plants';
 
 export default function Pagination() {
   const navigate = useNavigate();

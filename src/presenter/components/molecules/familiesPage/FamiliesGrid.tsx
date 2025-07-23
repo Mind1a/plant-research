@@ -1,7 +1,7 @@
 import { usePlants } from '../../../../api/use-get-plants';
 import { Plant } from '../../../../types';
-import Loader from '../../atoms/loader/Loader';
 import NoSearchResults from '../../NoSearchResults/noSearchResults';
+import Loader from '../../atoms/loader/Loader';
 import FamilieCard from './FamilieCard';
 
 export default function FamiliesGrid() {

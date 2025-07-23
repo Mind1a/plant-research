@@ -1,5 +1,5 @@
-import { aboutProjectImg } from '../../../assets';
 import BookIcon from '../../../../assets/svgs/book-open-alt.svg?react';
+import { aboutProjectImg } from '../../../assets';
 
 export default function AboutProjectSection() {
   return (

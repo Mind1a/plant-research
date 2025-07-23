@@ -1,7 +1,9 @@
 import { useParams } from 'react-router';
-import API from './api';
-import { useQuery, UseQueryResult } from '@tanstack/react-query';
+
+import { UseQueryResult, useQuery } from '@tanstack/react-query';
+
 import { Plant } from '../types';
+import API from './api';
 
 const fetchPlantById = async (id: string): Promise<Plant | null> => {
   try {
