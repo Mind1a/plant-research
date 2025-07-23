@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
+
 import { getDeviceSize } from '../hooks/use-device-size';
 
 type DeviceSize = 'xs' | 'xl';

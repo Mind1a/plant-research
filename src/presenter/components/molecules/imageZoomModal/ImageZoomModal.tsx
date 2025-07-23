@@ -1,8 +1,9 @@
-import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
-import { RxZoomIn, RxZoomOut, RxCross1 } from 'react-icons/rx';
+import { RxCross1, RxZoomIn, RxZoomOut } from 'react-icons/rx';
 import { TbZoomReplace } from 'react-icons/tb';
-import { ImageZoomModalProps } from '../../../../types';
+import { TransformComponent, TransformWrapper } from 'react-zoom-pan-pinch';
+
 import { useGetPlant } from '../../../../api/use-get-plant';
+import { ImageZoomModalProps } from '../../../../types';
 import Loader from '../../atoms/loader/Loader';
 
 const zoomButtons = [

@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router';
+
 import { Plant } from '../../../../types';
 
 export default function FamilieCard({ data }: { data: Plant }) {
@@ -15,7 +16,10 @@ export default function FamilieCard({ data }: { data: Plant }) {
       onClick={() => navigate(`/plant/${data.id}`)}
       className="group w-full cursor-pointer"
     >
-      <div className="h-[277px] rounded-xl border-2 border-transparent shadow-sm transition-colors duration-300 group-hover:border-primary max-900:h-[244px] max-800:h-[188px] max-500:h-[159px]">
+      <div
+        className="h-[277px] rounded-xl border-2 border-transparent shadow-sm transition-colors duration-300 group-hover:border-primary max-900:h-[244px] max-800:h-[188px] max-500:h-[159px]"
+        style={{ boxShadow: '0 10px 20px 0 #5C73A012' }}
+      >
         <img
           src={plantImg}
           className="h-full w-full rounded-xl object-cover"

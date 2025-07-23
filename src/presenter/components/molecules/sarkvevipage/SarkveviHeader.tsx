@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router';
+
 import { rightArrow } from '../../../assets';
 import Button from '../../atoms/buttons/Button';
 
