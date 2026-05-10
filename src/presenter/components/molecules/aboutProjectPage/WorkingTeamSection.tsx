@@ -6,7 +6,7 @@ export default function WorkingTeamSection() {
     <>
       <section>
         <h2 className="mb-6 text-title-sm font-bold leading-[1.5] text-charcoalGrey max-1000:text-subtitle max-450:text-[16px]">
-          პროექტის მუშაობდნენ
+          პროექტზე მუშაობდნენ
         </h2>
         <ProjectAuthor />
         <WorkingTeam />
