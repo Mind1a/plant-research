@@ -1,10 +1,8 @@
-import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import { aboutBanner } from '../../../assets';
-import Button from '../../atoms/buttons/Button';
 
 export default function AboutProject() {
-  const navigate = useNavigate();
   return (
     <section className="mt-[61px] flex justify-between max-1050:items-center max-700:mt-[31px] max-700:flex-col">
       <div className="w-full flex-1">
@@ -18,12 +16,12 @@ export default function AboutProject() {
           მოყვარული ბოტანიკოსებისათვის, რომლებსაც აქვთ სურვილი მცენარეთა
           ოჯახების რკვევის პრაქტიკულ უნარ-ჩვევებს დაეუფლონ.
         </p>
-        <Button
-          label="სრულად"
-          clasname="mt-6 max-700:mx-auto max-500:h-[40px] max-500:text-[14px] max-450:w-full max-450:rounded-[6px]"
-          variant="secondary"
-          onclick={() => navigate('/about-project')}
-        />
+        <Link
+          to="/about-project"
+          className="mt-6 inline-flex items-center justify-center rounded-[8px] border border-charcoalGrey px-6 py-2 text-body-md font-medium text-charcoalGrey transition-colors max-700:mx-auto max-500:h-[40px] max-500:text-[14px] max-450:w-full max-450:rounded-[6px] bg-lightGreen px-[18px] hover:border-transparent hover:bg-[#077A5D] hover:text-white"
+        >
+          სრულად
+        </Link>
       </div>
       <div className="w-[580px] max-1050:w-[450px] max-900:w-[400px] max-800:w-[350px] max-700:mt-[23px] max-450:w-full max-450:px-5">
         <img src={aboutBanner} className="w-full" alt="about-project" />
